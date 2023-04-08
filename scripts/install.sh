@@ -45,6 +45,11 @@ ln -sf ~/dotfiles/git/.gitconfig ~/.gitconfig
 ln -sf ~/dotfiles/git/ignore ~/.config/git/ignore
 ln -sf ~/dotfiles/git/office ~/.config/git/office
 
+# node with volota
+curl https://get.volta.sh | bash
+volta install node
+volta install yarn
+
 # dotfiles
 mkdir -p ~/ghq
 ln -sf ~/dotfiles ~/ghq/dotfiles

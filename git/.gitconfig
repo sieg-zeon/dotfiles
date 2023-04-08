@@ -1,0 +1,16 @@
+[alias]
+        st = status
+        ci = commit
+        br = branch
+        co = checkout
+[user]
+        name = jion_kozono
+        email = zeon66190329@gmail.com
+[init]
+	defaultBranch = main
+[credential]
+	helper = osxkeychain
+[pull]
+	rebase = true
+[push]
+	autoSetupRemote = true

@@ -1,0 +1,16 @@
+### ignore all ###
+/*
+/.**
+
+### not ignore ###
+!/Brewfile
+!/Brewfile.lock.json
+!/scripts
+!/asdf/
+!/zsh/
+!/git/
+!/vim/
+
+!/README.md
+!/LICENCE
+!.gitignore

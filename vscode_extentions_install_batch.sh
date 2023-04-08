@@ -1,0 +1,79 @@
+#!/bin/bash
+
+# Visual Studio Code :: Package list
+pkglist=(
+  abusaidm.html-snippets
+  alefragnani.Bookmarks
+  alexcvzz.vscode-sqlite
+  alexisvt.flutter-snippets
+  anseki.vscode-color
+  austin.code-gnu-global
+  christian-kohler.npm-intellisense
+  christian-kohler.path-intellisense
+  chrmarti.regex
+  codezombiech.gitignore
+  cschlosser.doxdocgen
+  Dart-Code.dart-code
+  Dart-Code.flutter
+  DavidAnson.vscode-markdownlint
+  dbaeumer.vscode-eslint
+  DiemasMichiels.emulate
+  donjayamanne.githistory
+  dsznajder.es7-react-js-snippets
+  eamodio.gitlens
+  ecmel.vscode-html-css
+  EditorConfig.EditorConfig
+  emilast.LogFileHighlighter
+  esbenp.prettier-vscode
+  formulahendry.code-runner
+  GraphQL.vscode-graphql
+  GraphQL.vscode-graphql-syntax
+  Gruntfuggly.todo-tree
+  HookyQR.beautify
+  humao.rest-client
+  IronGeek.vscode-env
+  jeff-hykin.better-cpp-syntax
+  mechatroner.rainbow-csv
+  mikoz.black-py
+  ms-azuretools.vscode-docker
+  MS-CEINTL.vscode-language-pack-ja
+  ms-dotnettools.csharp
+  ms-python.isort
+  ms-python.python
+  ms-python.vscode-pylance
+  ms-vscode-remote.remote-containers
+  ms-vscode.cmake-tools
+  ms-vscode.cpptools
+  ms-vscode.cpptools-extension-pack
+  ms-vscode.cpptools-themes
+  msjsdiag.vscode-react-native
+  Nash.awesome-flutter-snippets
+  octref.vetur
+  oderwat.indent-rainbow
+  PKief.material-icon-theme
+  redhat.java
+  rogalmic.bash-debug
+  rust-lang.rust
+  rust-lang.rust-analyzer
+  Shan.code-settings-sync
+  shardulm94.trailing-spaces
+  stevencl.addDocComments
+  streetsidesoftware.code-spell-checker
+  svipas.control-snippets
+  twxs.cmake
+  vadimcn.vscode-lldb
+  VisualStudioExptTeam.intellicode-api-usage-examples
+  VisualStudioExptTeam.vscodeintellicode
+  vscjava.vscode-java-debug
+  vscjava.vscode-java-dependency
+  vscjava.vscode-java-pack
+  vscjava.vscode-java-test
+  vscjava.vscode-maven
+  wix.vscode-import-cost
+  xabikos.JavaScriptSnippets
+)
+
+for var in ${pkglist[@]}
+do
+    code --install-extension $var
+done

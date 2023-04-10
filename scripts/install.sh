@@ -1,4 +1,3 @@
-
 #!/bin/sh
 
 set -e
@@ -49,6 +48,9 @@ ln -sf ~/dotfiles/git/office ~/.config/git/office
 curl https://get.volta.sh | bash
 volta install node
 volta install yarn
+
+# atcoder
+ln -sf ~/dotfiles/atcoder/.atcodertools.toml ~/.atcodertools.toml
 
 # dotfiles
 mkdir -p ~/ghq

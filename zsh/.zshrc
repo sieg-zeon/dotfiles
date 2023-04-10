@@ -20,6 +20,8 @@ HISTSIZE=100000
 SAVEHIST=100000
 
 autoload -Uz colors && colors # プロンプトへ色を付ける
+export LSCOLORS=cxfxcxdxbxegedabagacad
+
 export LANG=ja_JP.UTF-8 # 日本語を使用
 
 if type brew &>/dev/null; then
@@ -47,13 +49,12 @@ path=(
     /sbin
     /Library/Apple/usr/bin
 )
-
 # Git リポジトリ以外では $(git_super_status) を表示させたくない場合
 git_prompt() {
     if [ "$(git rev-parse --is-inside-work-tree 2> /dev/null)" = true ]; then
-        PROMPT="%F{034}%h%f:%F{020}%~%f $(git_super_status)"$'\n'"%# "
+        PROMPT='%F{cyan}%W%f %F{cyan}%*%f:%F{yellow}%m%f:%F{magenta}%n%f: %F{green}%~%f %F{red}$(git_super_status)%f '
     else
-        PROMPT="%F{034}%h%f:%F{020}%~%f "$'\n'"%# "
+        PROMPT='%F{cyan}%W%f %F{cyan}%*%f:%F{yellow}%m%f:%F{magenta}%n%f: %F{green}%~%f '
     fi
 }
 
@@ -107,6 +108,10 @@ alias co='git checkout'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
+alias ll='ls -lGF'
+alias ls='ls -GF'
+alias ac-test="chmod 755 main.py && atcoder-tools test"
+alias ac-gen="atcoder-tools gen"
 alias sudo='sudo ' # sudo の後のコマンドでエイリアスを有効にする
 
 ########################################

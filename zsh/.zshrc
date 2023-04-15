@@ -111,14 +111,15 @@ alias egrep='egrep --color=auto'
 alias ll='ls -lGF'
 alias ls='ls -GF'
 alias ac-test="chmod 755 main.py && atcoder-tools test"
-alias ac-gen="atcoder-tools gen"
+alias ac="atcoder-tools"
 alias sudo='sudo ' # sudo の後のコマンドでエイリアスを有効にする
-
 ########################################
 # OS 別の設定
 case ${OSTYPE} in
     darwin*)
         #Mac用の設定
+git_prompt='%F{green}%~%f %F{red}$(__git_ps1 "%s" )%f'
+git_prompt='%F{green}%~%f %F{red}$(__git_ps1 "%s" )%f'
         export CLICOLOR=1
         alias ls='ls -G -F'
         ;;

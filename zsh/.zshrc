@@ -133,7 +133,9 @@ esac
 eval "$(gh completion -s zsh)"
 
 # mysql
-export PATH="/usr/local/opt/mysql-client@5.7/bin:$PATH"
+export PATH=$PATH:/opt/homebrew/Cellar/mysql@5.7/5.7.42/bin
+# postgres
+export PATH=$PATH:/opt/homebrew/Cellar/postgresql@14/10.22_4/bin
 
 # エディタ
 export EDITOR=vscode

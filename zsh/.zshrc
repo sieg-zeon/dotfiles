@@ -143,5 +143,8 @@ export EDITOR=vscode
 # direnv
 eval "$(direnv hook zsh)"
 
+# yarn
+export PATH="$HOME/.yarn/bin:$PATH"
+
 # asdf
 . /opt/homebrew/opt/asdf/libexec/asdf.sh

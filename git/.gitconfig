@@ -3,6 +3,9 @@
         ci = commit
         br = branch
         co = checkout
+	    log1 = log --oneline
+	    pl = pull
+	    ps = ps
 [user]
         name = jion_kozono
         email = zeon66190329@gmail.com

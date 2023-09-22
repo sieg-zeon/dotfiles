@@ -148,3 +148,7 @@ export PATH="$HOME/.yarn/bin:$PATH"
 
 # asdf
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+# Go
+export GOPATH=$(go env GOPATH)
+export PATH=$PATH:$GOPATH/bin

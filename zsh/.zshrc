@@ -112,7 +112,8 @@ alias ll='ls -lGF'
 alias ls='ls -GF'
 alias ac-test="chmod 755 main.py && atcoder-tools test"
 alias ac="atcoder-tools"
-alias sudo='sudo ' # sudo の後のコマンドでエイリアスを有効にする
+alias pn=pnpm
+
 ########################################
 # OS 別の設定
 case ${OSTYPE} in

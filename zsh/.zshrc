@@ -83,7 +83,7 @@ ZSH_HIGHLIGHT_STYLES[globbing]='none'
 # Volta
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
-# export VOLTA_FEATURE_PNPM=1
+export VOLTA_FEATURE_PNPM=1
 
 #android emulator
 export ANDROID_HOME=$HOME/Library/Android/sdk

@@ -133,8 +133,6 @@ esac
 # github cli
 eval "$(gh completion -s zsh)"
 
-# mysql
-export PATH=$PATH:/opt/homebrew/Cellar/mysql@5.7/5.7.42/bin
 # postgres
 export PATH=$PATH:/opt/homebrew/Cellar/postgresql@14/10.22_4/bin
 

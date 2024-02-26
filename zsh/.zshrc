@@ -94,6 +94,7 @@ alias ls='ls -GF'
 alias ac-test="chmod 755 main.py && atcoder-tools test"
 alias ac="atcoder-tools"
 alias pn="pnpm"
+
 ########################################
 # OS 別の設定
 case ${OSTYPE} in
@@ -116,16 +117,8 @@ export EDITOR=vscode
 export PATH=$PATH:/opt/homebrew/Cellar/postgresql@14/10.22_4/bin
 # direnv
 eval "$(direnv hook zsh)"
-# yarn
-export PATH="$HOME/.yarn/bin:$PATH"
-# asdf
-# . /usr/local/opt/asdf/libexec/asdf.sh
 # mise
-eval "$(~/.local/bin/mise activate zsh)"
-
-# Go
-# export GOPATH=$(go env GOPATH)
-# export PATH=$PATH:$GOPATH/bin
+eval "$(/usr/local/bin/mise activate zsh)"
 # bun completions
 [ -s "/Users/jion_kozono/.bun/_bun" ] && source "/Users/jion_kozono/.bun/_bun"
 # bun
@@ -135,14 +128,14 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 export VOLTA_FEATURE_PNPM=1
-#android emulator
+# android emulator
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+# THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/xiaoyuanzhiwang/.sdkman"
 [[ -s "/Users/xiaoyuanzhiwang/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/xiaoyuanzhiwang/.sdkman/bin/sdkman-init.sh"
 # Setting PATH for Flutter

@@ -50,6 +50,9 @@ volta install node
 volta install yarn
 volta install pnpm
 
+# npm install
+npm i -g @antfu/ni
+
 # git
 mkdir -p ~/.config/git
 ln -sf ~/dotfiles/git/ignore ~/.config/git/ignore

@@ -6,6 +6,7 @@
 !/Brewfile
 !/Brewfile.lock.json
 !/scripts
+!/mise/
 !/asdf/
 !/atcoder/
 !/zsh/

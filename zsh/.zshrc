@@ -80,26 +80,6 @@ ZSH_HIGHLIGHT_STYLES[path]='fg=cyan'
 # グロブ
 ZSH_HIGHLIGHT_STYLES[globbing]='none'
 
-# Volta
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
-export VOLTA_FEATURE_PNPM=1
-
-#android emulator
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/xiaoyuanzhiwang/.sdkman"
-[[ -s "/Users/xiaoyuanzhiwang/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/xiaoyuanzhiwang/.sdkman/bin/sdkman-init.sh"
-
-# Setting PATH for Flutter
-export PATH="$PATH:/Users/xiaoyuanzhiwang/development/flutter/bin"
-export PATH="$PATH":"$HOME/.pub-cache/bin"
-
 # エイリアス
 alias python='python3'
 alias gac='git add . && git ci -m'
@@ -130,31 +110,44 @@ git_prompt='%F{green}%~%f %F{red}$(__git_ps1 "%s" )%f'
         ;;
 esac
 
-# github cli
-eval "$(gh completion -s zsh)"
-
-# postgres
-export PATH=$PATH:/opt/homebrew/Cellar/postgresql@14/10.22_4/bin
-
 # エディタ
 export EDITOR=vscode
-
+# postgres
+export PATH=$PATH:/opt/homebrew/Cellar/postgresql@14/10.22_4/bin
 # direnv
 eval "$(direnv hook zsh)"
-
 # yarn
 export PATH="$HOME/.yarn/bin:$PATH"
-
 # asdf
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
+# . /usr/local/opt/asdf/libexec/asdf.sh
+# mise
+eval "$(~/.local/bin/mise activate zsh)"
 
 # Go
-export GOPATH=$(go env GOPATH)
-export PATH=$PATH:$GOPATH/bin
-
+# export GOPATH=$(go env GOPATH)
+# export PATH=$PATH:$GOPATH/bin
 # bun completions
 [ -s "/Users/jion_kozono/.bun/_bun" ] && source "/Users/jion_kozono/.bun/_bun"
-
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+# Volta
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+export VOLTA_FEATURE_PNPM=1
+#android emulator
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/xiaoyuanzhiwang/.sdkman"
+[[ -s "/Users/xiaoyuanzhiwang/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/xiaoyuanzhiwang/.sdkman/bin/sdkman-init.sh"
+# Setting PATH for Flutter
+export PATH="$PATH:/Users/xiaoyuanzhiwang/development/flutter/bin"
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+
+# github cli
+eval "$(gh completion -s zsh)"

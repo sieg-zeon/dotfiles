@@ -25,6 +25,8 @@ brew "volta"
 brew "mysql"
 
 # Desktop Apps
+tap "homebrew/cask"
+
 cask "visual-studio-code"
 cask "google-chrome"
 cask "iterm2"
@@ -33,3 +35,7 @@ cask "postman"
 cask "slack"
 cask "discord"
 cask "zoom"
+
+brew "mas"
+mas "Xcode", id: 497799835
+mas "LINE", id: 539883307

@@ -39,20 +39,6 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 echo "--- Install Xcode Command Line Tools is Start! ---"
 which xcode-select >/dev/null 2>&1 || xcode-select --install
 
-# mise
-echo "--- Install mise install is Start! ---"
-chmod u+x mise/_mise.sh
-mise/_mise.sh
-
-# Volta install
-echo "--- Install Volta is Start! ---"
-volta install node
-volta install yarn
-volta install pnpm
-
-# npm install
-npm i -g @antfu/ni
-
 # git
 mkdir -p ~/.config/git
 ln -sf ~/dotfiles/git/ignore ~/.config/git/ignore
@@ -65,6 +51,24 @@ ln -sf ~/dotfiles/zsh/.zshrc ~/.zshrc
 ln -sf ~/dotfiles/mise/.tool-versions ~/.tool-versions
 ln -sf ~/dotfiles/atcoder/.atcodertools.toml ~/.atcodertools.toml
 ln -sf ~/dotfiles/git/.gitconfig ~/.gitconfig
-
 echo "--- Create symbolic link is Done! ---"
+
+# mise
+echo "--- Install mise install is Start! ---"
+chmod u+x mise/_mise.sh
+mise/_mise.sh
+echo "--- Install mise install is Done! ---"
+
+# Volta install
+echo "--- Install Volta is Start! ---"
+volta install node
+volta install yarn
+volta install pnpm
+echo "--- Install Volta is Done! ---"
+
+# npm install
+echo "--- Install npm package is Start! ---"
+npm i -g @antfu/ni
+echo "--- Install npm package is Done! ---"
+
 echo "All Done!"

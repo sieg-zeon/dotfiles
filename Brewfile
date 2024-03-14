@@ -1,6 +1,5 @@
 cask_args appdir: "/Applications"
 
-tap "homebrew/bundle"
 brew "openssl@3"
 brew "readline"
 brew "curl"
@@ -25,7 +24,6 @@ brew "volta"
 brew "mysql"
 
 # Desktop Apps
-tap "homebrew/cask"
 
 cask "visual-studio-code"
 cask "google-chrome"

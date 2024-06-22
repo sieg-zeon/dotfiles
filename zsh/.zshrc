@@ -19,6 +19,8 @@ HISTFILE=~/.zsh_history
 HISTSIZE=100000
 SAVEHIST=100000
 
+autoload -Uz compinit && compinit # 補完機能を有効にする
+
 autoload -Uz colors && colors # プロンプトへ色を付ける
 export LSCOLORS=cxfxcxdxbxegedabagacad
 
@@ -26,7 +28,6 @@ export LANG=ja_JP.UTF-8 # 日本語を使用
 
 if type brew &>/dev/null; then
     FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-    autoload -Uz compinit && compinit
     source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
     source $(brew --prefix)/opt/zsh-git-prompt/zshrc.sh
     source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -118,7 +119,7 @@ export PATH=$PATH:/opt/homebrew/Cellar/postgresql@14/10.22_4/bin
 # direnv
 eval "$(direnv hook zsh)"
 # mise
-eval "$(~/.local/bin/mise activate zsh)"
+eval "$(/opt/homebrew/bin/mise activate zsh)"
 # bun completions
 [ -s "/Users/jion_kozono/.bun/_bun" ] && source "/Users/jion_kozono/.bun/_bun"
 # bun

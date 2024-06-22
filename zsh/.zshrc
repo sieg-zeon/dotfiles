@@ -118,7 +118,7 @@ export PATH=$PATH:/opt/homebrew/Cellar/postgresql@14/10.22_4/bin
 # direnv
 eval "$(direnv hook zsh)"
 # mise
-eval "$(/usr/local/bin/mise activate zsh)"
+eval "$(~/.local/bin/mise activate zsh)"
 # bun completions
 [ -s "/Users/jion_kozono/.bun/_bun" ] && source "/Users/jion_kozono/.bun/_bun"
 # bun

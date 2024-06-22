@@ -50,6 +50,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 echo "--- Install Xcode Command Line Tools is Start! ---"
 which xcode-select >/dev/null 2>&1 || xcode-select --install
+sudo xcodebuild -license accept
 
 # mise
 echo "--- Install mise install is Start! ---"
@@ -68,5 +69,8 @@ echo "--- Install Volta is Done! ---"
 echo "--- Install npm package is Start! ---"
 npm i -g @antfu/ni
 echo "--- Install npm package is Done! ---"
+
+# source zsh
+source ~/.zshrc
 
 echo "All Done!"

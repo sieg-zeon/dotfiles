@@ -5,7 +5,6 @@ brew "readline"
 brew "curl"
 brew "git"
 brew "coreutils"
-brew "asdf"
 brew "direnv"
 brew "gh"
 brew "sqlite"
@@ -22,6 +21,7 @@ brew "aws-sam-cli"
 brew "jq"
 brew "volta"
 brew "mysql"
+brew "mise"
 
 # Desktop Apps
 
@@ -33,6 +33,7 @@ cask "postman"
 cask "slack"
 cask "discord"
 cask "zoom"
+cask "clipy"
 
 brew "mas"
 mas "Xcode", id: 497799835

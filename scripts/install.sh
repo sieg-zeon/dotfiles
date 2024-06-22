@@ -20,7 +20,7 @@ ln -sf ~/dotfiles/vim/.vimrc ~/.vimrc
 ln -sf ~/dotfiles/zsh/.zshrc ~/.zshrc
 ln -sf ~/dotfiles/mise/.tool-versions ~/.tool-versions
 ln -sf ~/dotfiles/atcoder/.atcodertools.toml ~/.atcodertools.toml
-ln -sf ~/dotfiles/git/.gitconfig ~/.gitconfig
+ln -sf ~/dotfiles/git/.gitconfig ~/.gitconfig # configを分ける場合は、unlink ~/.gitconfig
 echo "--- Create symbolic link is Done! ---"
 
 # Homebrew

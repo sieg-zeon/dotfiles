@@ -22,6 +22,7 @@ brew "jq"
 brew "volta"
 brew "mysql"
 brew "mise"
+brew "mas"
 
 # Desktop Apps
 
@@ -34,6 +35,7 @@ cask "slack"
 cask "discord"
 cask "zoom"
 cask "clipy"
+cask "chatgpt"
 
 brew "mas"
 mas "Xcode", id: 497799835

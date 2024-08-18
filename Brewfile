@@ -27,7 +27,8 @@ brew "mas"
 # Desktop Apps
 
 cask "visual-studio-code"
-cask "google-chrome"
+# cask "google-chrome"
+cask "arc"
 cask "iterm2"
 cask "docker"
 cask "postman"

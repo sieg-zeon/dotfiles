@@ -140,9 +140,13 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/xiaoyuanzhiwang/.sdkman"
 [[ -s "/Users/xiaoyuanzhiwang/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/xiaoyuanzhiwang/.sdkman/bin/sdkman-init.sh"
-# Setting PATH for Flutter
+# Flutter
 export PATH="$PATH:/Users/xiaoyuanzhiwang/development/flutter/bin"
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 
 # github cli
 eval "$(gh completion -s zsh)"
+
+# tiup: https://docs.pingcap.com/ja/tidb/stable/tiup-overview#install-tiup
+export PATH=$HOME/.tiup/bin:$PATH
+# ↑ Remove the same path of the above line

@@ -70,6 +70,9 @@ echo "--- Install npm package is Start! ---"
 npm i -g @antfu/ni
 echo "--- Install npm package is Done! ---"
 
+# tiup: https://docs.pingcap.com/ja/tidb/stable/tiup-overview#install-tiup
+curl --proto '=https' --tlsv1.2 -sSf https://tiup-mirrors.pingcap.com/install.sh | sh
+
 # source zsh
 source ~/.zshrc
 

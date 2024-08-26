@@ -2,7 +2,6 @@
 pair_or_unpair_device() {
     local DEVICE_ID="$1"
     blueutil_path=$(which blueutil)
-    echo $blueutil_path
     local res=$($blueutil_path --is-connected $DEVICE_ID)
     if [[ "$res" = '1' ]]; then
         $blueutil_path --unpair $DEVICE_ID

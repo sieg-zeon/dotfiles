@@ -74,7 +74,7 @@ echo "--- Install npm package is Done! ---"
 curl --proto '=https' --tlsv1.2 -sSf https://tiup-mirrors.pingcap.com/install.sh | sh
 
 # pair_or_unpair_deviceのシンボリックリンク
-ln -s ~/dotfiles/scripts/pair_or_unpair_device.sh /usr/local/bin/pair_or_unpair_device
+sudo ln -s ~/dotfiles/scripts/pair_or_unpair_device.sh /usr/local/bin/pair_or_unpair_device
 chmod 755 /usr/local/bin/pair_or_unpair_device
 
 # source zsh

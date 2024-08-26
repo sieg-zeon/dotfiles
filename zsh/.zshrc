@@ -97,6 +97,8 @@ alias ac-test="chmod 755 main.py && atcoder-tools test"
 alias ac="atcoder-tools"
 alias pn="pnpm"
 
+. ~/dotfiles/git/alias.sh
+
 ########################################
 # OS 別の設定
 case ${OSTYPE} in

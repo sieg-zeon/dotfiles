@@ -15,3 +15,5 @@
 !/README.md
 !/LICENCE
 !.gitignore
+
+git/alias.sh

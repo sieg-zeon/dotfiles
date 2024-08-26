@@ -97,6 +97,7 @@ alias ac-test="chmod 755 main.py && atcoder-tools test"
 alias ac="atcoder-tools"
 alias pn="pnpm"
 
+# 仕事用などで使うエイリアス
 . ~/dotfiles/git/alias.sh
 
 ########################################

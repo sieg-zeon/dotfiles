@@ -13,7 +13,7 @@ fi
 mkdir -p ~/.config/git
 ln -sf ~/dotfiles/git/ignore ~/.config/git/ignore
 
-# alias用のファイル作成
+# 共通で持ちたくないalias用のファイル作成
 touch ~/dotfiles/git/alias.sh
 
 # シンボリックリンクの作成

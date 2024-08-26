@@ -23,7 +23,7 @@ brew "volta"
 brew "mysql"
 brew "mise"
 brew "mas"
-
+brew blueutil
 # Desktop Apps
 
 cask "visual-studio-code"

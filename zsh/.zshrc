@@ -96,6 +96,7 @@ alias ls='ls -GF'
 alias ac-test="chmod 755 main.py && atcoder-tools test"
 alias ac="atcoder-tools"
 alias pn="pnpm"
+alias pud="pair_or_unpair_device"
 
 # 仕事用などで使うエイリアス
 . ~/dotfiles/git/alias.sh

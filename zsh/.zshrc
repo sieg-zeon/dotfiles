@@ -99,8 +99,8 @@ alias pn="pnpm"
 alias pud="pair_or_unpair_device"
 
 # 仕事用などで使うエイリアス
-if [ -f ~/dotfiles/zsh/alias.sh ]; then
-    source ~/dotfiles/zsh/alias.sh
+if [ -f ~/dotfiles/git/alias.sh ]; then
+    source ~/dotfiles/git/alias.sh
 fi
 
 ########################################

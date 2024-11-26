@@ -38,6 +38,7 @@ cask "zoom"
 cask "clipy"
 cask "chatgpt"
 cask "mysqlworkbench"
+cask "deepl"
 
 brew "mas"
 mas "Xcode", id: 497799835

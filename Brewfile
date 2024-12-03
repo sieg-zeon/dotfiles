@@ -23,6 +23,7 @@ brew "volta"
 brew "mysql"
 brew "mise"
 brew "mas"
+brew "hadolint"
 brew blueutil
 # Desktop Apps
 

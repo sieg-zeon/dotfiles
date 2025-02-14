@@ -9,7 +9,7 @@ if test -n "$(git -C ${DOTFILES_HOME} status --porcelain)" ||
   echo -e "\e[33mPlease update them with the following command.\e[m"
   echo "  cd ${DOTFILES_HOME}"
   echo "  git add ."
-  echo "  git commit -m \"update dotfiles\""
+  echo "  git commit -m \"update: dotfiles\""
   echo "  git push origin main"
   echo -e "\e[33mor\e[m"
   echo "  git push origin main"

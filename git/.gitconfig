@@ -18,4 +18,4 @@
 [push]
 	autoSetupRemote = true
 [core]
-	editor = code --wait
+	editor = cursor --wait

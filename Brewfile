@@ -21,11 +21,13 @@ brew "aws-sam-cli"
 brew "jq"
 brew "yq"
 brew "volta"
-brew "mysql"
+# brew "mysql" # 9.x がインストールされてしまう
+brew "mysql@8.0" # パスを.zshrc で設定する必要がある
 brew "mise"
 brew "mas"
 brew "hadolint"
-brew blueutil
+brew "blueutil"
+
 # Desktop Apps
 
 cask "visual-studio-code"

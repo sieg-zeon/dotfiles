@@ -42,7 +42,7 @@ which /opt/homebrew/bin/brew >/dev/null 2>&1 && echo "Execute brew update..." &&
 which /opt/homebrew/bin/brew >/dev/null 2>&1 && echo "Execute brew upgrade..." && brew upgrade --verbose
 
 echo "Execute brew bundle in Brewfile..."
-brew bundle --file ./Brewfile --verbose
+brew bundle - --no-upgrade --no-lock --file ./Brewfile --verbose
 
 which brew >/dev/null 2>&1 && echo "Execute brew cleanup..." && brew cleanup --verbose
 

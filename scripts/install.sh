@@ -24,6 +24,13 @@ ln -sf ~/dotfiles/zsh/.zshrc ~/.zshrc
 ln -sf ~/dotfiles/mise/.tool-versions ~/.tool-versions
 ln -sf ~/dotfiles/atcoder/.atcodertools.toml ~/.atcodertools.toml
 ln -sf ~/dotfiles/git/.gitconfig ~/.gitconfig # configを分ける場合は、unlink ~/.gitconfig
+# claude
+mkdir -p ~/.claude
+ln -sf ~/dotfiles/claude/settings.json ~/.claude/settings.json
+ln -sf ~/dotfiles/claude/CLAUDE.md ~/.claude/CLAUDE.md
+# gemini
+mkdir -p ~/.gemini
+ln -sf ~/dotfiles/gemini/GEMINI.md ~/.gemini/GEMINI.md
 echo "--- Create symbolic link is Done! ---"
 
 # Homebrew
@@ -71,6 +78,8 @@ echo "--- Install Volta is Done! ---"
 # npm install
 echo "--- Install npm package is Start! ---"
 npm i -g @antfu/ni
+npm i -g @anthropic-ai/claude-code
+npm i -g @google/gemini-cli
 echo "--- Install npm package is Done! ---"
 
 # tiup: https://docs.pingcap.com/ja/tidb/stable/tiup-overview#install-tiup
@@ -79,6 +88,12 @@ curl --proto '=https' --tlsv1.2 -sSf https://tiup-mirrors.pingcap.com/install.sh
 # pair_or_unpair_deviceのシンボリックリンク
 sudo ln -s ~/dotfiles/scripts/pair_or_unpair_device.sh /usr/local/bin/pair_or_unpair_device
 chmod 755 /usr/local/bin/pair_or_unpair_device
+
+# AI configuration files update
+echo "--- Update AI configuration files is Start! ---"
+chmod +x ~/dotfiles/scripts/update-ai-configs.sh
+~/dotfiles/scripts/update-ai-configs.sh
+echo "--- Update AI configuration files is Done! ---"
 
 # source zsh
 source ~/.zshrc

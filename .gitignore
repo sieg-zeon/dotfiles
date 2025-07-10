@@ -3,6 +3,10 @@
 /.**
 
 ### not ignore ###
+!/claude/
+!/claude/settings.json
+!/common/
+!/gemini/
 !/Brewfile
 !/Brewfile.lock.json
 !/scripts
@@ -17,3 +21,7 @@
 !.gitignore
 
 alias.sh
+
+# Generated AI configuration files (auto-generated from common/development-rules.md)
+claude/CLAUDE.md
+gemini/GEMINI.md

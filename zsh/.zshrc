@@ -1,16 +1,16 @@
 # あたらしくインストールされたコマンドを即認識させる
 zstyle ":completion:*:commands" rehash 1
 # Options
-setopt print_eight_bit  # 日本語ファイル名を表示可能にする
-setopt no_flow_control  # フローコントロールを無効にする
-setopt interactive_comments  # '#' 以降をコメントとして扱う
-setopt auto_cd  # ディレクトリ名だけでcdする
-setopt share_history  # 同時に起動したzshの間でヒストリを共有する
-setopt hist_ignore_all_dups  # 同じコマンドをヒストリに残さない
-setopt hist_ignore_space  # スペースから始まるコマンド行はヒストリに残さない
-setopt hist_reduce_blanks  # ヒストリに保存するときに余分なスペースを削除する
-setopt nonomatch # curl などで ? や & をエスケープなしで使いたい
-setopt IGNOREEOF # Ctrl+Dでログアウトしてしまうことを防ぐ
+setopt print_eight_bit      # 日本語ファイル名を表示可能にする
+setopt no_flow_control      # フローコントロールを無効にする
+setopt interactive_comments # '#' 以降をコメントとして扱う
+setopt auto_cd              # ディレクトリ名だけでcdする
+setopt share_history        # 同時に起動したzshの間でヒストリを共有する
+setopt hist_ignore_all_dups # 同じコマンドをヒストリに残さない
+setopt hist_ignore_space    # スペースから始まるコマンド行はヒストリに残さない
+setopt hist_reduce_blanks   # ヒストリに保存するときに余分なスペースを削除する
+setopt nonomatch            # curl などで ? や & をエスケープなしで使いたい
+setopt IGNOREEOF            # Ctrl+Dでログアウトしてしまうことを防ぐ
 
 ZLE_REMOVE_SUFFIX_CHARS=$'' # ファイル名を補完した後に挿入されたスペースが消えてしまう
 
@@ -40,19 +40,20 @@ source ~/dotfiles/zsh/.zshrc.check_update_dotfiles
 # 環境変数
 typeset -U path PATH
 path=(
-    /opt/homebrew/bin(N-/)
-    /opt/homebrew/sbin(N-/)
-    /usr/local/bin(N-/)
-    /usr/local/sbin(N-/)
+    /opt/homebrew/bin
+    /opt/homebrew/sbin
+    /usr/local/bin
+    /usr/local/sbin
     /usr/bin
     /usr/sbin
     /bin
     /sbin
     /Library/Apple/usr/bin
 )
+
 # Git リポジトリ以外では $(git_super_status) を表示させたくない場合
 git_prompt() {
-    if [ "$(git rev-parse --is-inside-work-tree 2> /dev/null)" = true ]; then
+    if [ "$(git rev-parse --is-inside-work-tree 2>/dev/null)" = true ]; then
         PROMPT='%F{cyan}%W%f %F{cyan}%*%f:%F{yellow}%m%f:%F{magenta}%n%f: %F{green}%~%f %F{red}$(git_super_status)%f '
     else
         PROMPT='%F{cyan}%W%f %F{cyan}%*%f:%F{yellow}%m%f:%F{magenta}%n%f: %F{green}%~%f '
@@ -97,6 +98,7 @@ alias ac-test="chmod 755 main.py && atcoder-tools test"
 alias ac="atcoder-tools"
 alias pn="pnpm"
 alias pud="pair_or_unpair_device"
+alias cc='claude --dangerously-skip-permissions'
 
 # 仕事用などで使うエイリアス
 if [ -f ~/dotfiles/alias.sh ]; then
@@ -106,17 +108,17 @@ fi
 ########################################
 # OS 別の設定
 case ${OSTYPE} in
-    darwin*)
-        #Mac用の設定
-git_prompt='%F{green}%~%f %F{red}$(__git_ps1 "%s" )%f'
-git_prompt='%F{green}%~%f %F{red}$(__git_ps1 "%s" )%f'
-        export CLICOLOR=1
-        alias ls='ls -G -F'
-        ;;
-    linux*)
-        #Linux用の設定
-        alias ls='ls -F --color=auto'
-        ;;
+darwin*)
+    #Mac用の設定
+    git_prompt='%F{green}%~%f %F{red}$(__git_ps1 "%s" )%f'
+    git_prompt='%F{green}%~%f %F{red}$(__git_ps1 "%s" )%f'
+    export CLICOLOR=1
+    alias ls='ls -G -F'
+    ;;
+linux*)
+    #Linux用の設定
+    alias ls='ls -F --color=auto'
+    ;;
 esac
 
 # エディタ

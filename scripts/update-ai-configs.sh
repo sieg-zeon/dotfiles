@@ -13,6 +13,25 @@ mkdir -p "$GEMINI_DIR"
 
 echo "--- Updating AI configuration files ---"
 
+# AI CLIツールのインストール/更新
+echo "Installing/updating AI CLI tools..."
+
+echo "📦 Installing @anthropic-ai/claude-code..."
+if npm install -g @anthropic-ai/claude-code 2>/dev/null; then
+    echo "✅ Claude Code installed successfully"
+else
+    echo "⚠️  Claude Code installation failed (might already be installed or need permissions)"
+fi
+
+echo "📦 Installing @google/gemini-cli..."
+if npm install -g @google/gemini-cli 2>/dev/null; then
+    echo "✅ Gemini CLI installed successfully"
+else
+    echo "⚠️  Gemini CLI installation failed (might already be installed or need permissions)"
+fi
+
+echo ""
+
 # シンボリックリンクの確認と作成
 echo "Checking symbolic links..."
 

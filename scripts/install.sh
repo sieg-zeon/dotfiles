@@ -78,8 +78,6 @@ echo "--- Install Volta is Done! ---"
 # npm install
 echo "--- Install npm package is Start! ---"
 npm i -g @antfu/ni
-npm i -g @anthropic-ai/claude-code
-npm i -g @google/gemini-cli
 echo "--- Install npm package is Done! ---"
 
 # tiup: https://docs.pingcap.com/ja/tidb/stable/tiup-overview#install-tiup

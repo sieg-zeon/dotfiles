@@ -101,24 +101,6 @@
 - Maintain inline comments for complex logic
 - Keep documentation concise and practical
 
-## Project-Specific Notes
-
-### Current Project (aim-at-CMS-api)
-
-- NestJS-based GraphQL API
-- MySQL database with Prisma
-- Microservice architecture patterns
-- Heavy use of decorators (@Retry, @Transactional)
-- Focus on transaction management and database connection optimization
-
-### Common Patterns
-
-- Controller → Service → Repository architecture
-- UseCase pattern for complex business logic
-- DTO factories for data transformation
-- Comprehensive error handling with custom exceptions
-- Retry mechanisms for database operations
-
 ## DDD Principles
 
 ### Architecture

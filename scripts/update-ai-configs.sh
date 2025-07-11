@@ -70,27 +70,27 @@ echo ""
 
 # Claude用ファイルの生成
 echo "Generating CLAUDE.md..."
-cat > "$CLAUDE_DIR/CLAUDE.md" << 'CLAUDE_EOF'
+cat >"$CLAUDE_DIR/CLAUDE.md" <<'CLAUDE_EOF'
 # Claude Code Configuration
 
-このファイルは、全プロジェクトで共通のClaude Code設定と開発方針を定義します。
+This file defines the Claude Code settings and development policies common to all projects.
 
 CLAUDE_EOF
 
 # 共通ファイルの内容を追加
-cat "$COMMON_FILE" >> "$CLAUDE_DIR/CLAUDE.md"
+cat "$COMMON_FILE" >>"$CLAUDE_DIR/CLAUDE.md"
 
 # Gemini用ファイルの生成
 echo "Generating GEMINI.md..."
-cat > "$GEMINI_DIR/GEMINI.md" << 'GEMINI_EOF'
+cat >"$GEMINI_DIR/GEMINI.md" <<'GEMINI_EOF'
 # Gemini CLI Configuration
 
-このファイルは、全プロジェクトで共通のGemini CLI設定と開発方針を定義します。
+This file defines the Gemini CLI settings and development policies common to all projects.
 
 GEMINI_EOF
 
 # 共通ファイルの内容を追加
-cat "$COMMON_FILE" >> "$GEMINI_DIR/GEMINI.md"
+cat "$COMMON_FILE" >>"$GEMINI_DIR/GEMINI.md"
 
 echo "--- AI configuration files updated successfully ---"
 echo "📁 Source files:"

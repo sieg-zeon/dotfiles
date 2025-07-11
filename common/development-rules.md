@@ -1,181 +1,174 @@
-## 開発環境
+## Development Environment
 
-### 主要技術スタック
+### Tech Stack
 
-- **言語**: TypeScript/JavaScript (Node.js)
-- **パッケージマネージャー**: pnpm, yarn, volta
-- **データベース**: MySQL with Prisma, TiDB, AWS Aurora, Supabase
-- **バックエンド**: NestJS, GraphQL
-- **フロントエンド**: Next.js
-- **テスト**: Vitest
-- **コードスタイル**: ESLint, Prettier
+- **Language**: TypeScript/JavaScript (Node.js)
+- **Package Manager**: pnpm, yarn, volta
+- **Database**: MySQL with Prisma, TiDB, AWS Aurora, Supabase
+- **Backend**: NestJS, GraphQL
+- **Frontend**: Next.js
+- **Testing**: Vitest
+- **Code Style**: ESLint, Prettier
 
-### ツール・ユーティリティ
+### Tools & Utilities
 
-- **バージョン管理**: Git
-- **コンテナ**: Docker
-- **クラウド**: AWS, TiDB, GCP
+- **Version Control**: Git
+- **Container**: Docker
+- **Cloud**: AWS, TiDB, GCP
 - **CI/CD**: GitHub Actions, GitLab CI
 - **IDE**: VS Code
-- **ターミナル**: Zsh with custom dotfiles
+- **Terminal**: Zsh with custom dotfiles
 
-## プロジェクト規約
+## Project Standards
 
-### コードスタイル
+### Code Style
 
-- TypeScript で型安全性を確保
-- DDD アーキテクチャパターンを採用
-- 関数型プログラミングを優先（副作用のないコード）
-- 命令型よりも宣言型のコードを好む
-- 既存プロジェクトのパターンと規約に従う
-- デコレーターを適切に使用（NestJS 等）
-- カスタム例外による適切なエラーハンドリング
+- Ensure type safety with TypeScript
+- Adopt DDD architecture patterns
+- Prioritize functional programming (side-effect-free code)
+- Follow [Google TypeScript Style Guide](https://google.github.io/styleguide/tsguide.html)
 
 ### ORM
 
 - Prisma
-  - 適切なリポジトリパターンの実装
-  - 複雑なクエリには Prisma のクエリビルダーを使用
+  - Implement proper repository patterns
+  - Use Prisma query builder for complex queries
 - TypeORM
-  - エンティティとリポジトリの適切な分離
-  - トランザクション管理の実装
+  - Proper separation of entities and repositories
+  - Implement transaction management
 
-### API 開発
+### API Development
 
-- GraphQL スキーマファーストアプローチ
-  - NestJS の場合はコードファースト
-- 適切な入力値検証の実装
-- DTO によるデータ転送
-- セキュリティベストプラクティスの適用
+- GraphQL schema-first approach
+  - Code-first for NestJS
+- Implement proper input validation
+- Data transfer via DTOs
+- Apply security best practices
 
-### フロントエンド開発
+### Frontend Development
 
-- Next.js の App Router を活用
-- Server Components と Client Components の適切な使い分け
-- TypeScript での型安全なコンポーネント開発
-- 関数型コンポーネントと Hooks の使用
+- Utilize Next.js App Router
+- Proper use of Server/Client Components
+- Type-safe component development with TypeScript
+- Use functional components and Hooks
 
-## 開発方針
+## Development Guidelines
 
-### 言語とコミュニケーション
+### Language & Communication
 
-- **AIへの指示**: 日本語で行う
-- **AIからの返答**: 日本語で受け取る
-- **コメント**: 日本語で記述（国際的な開発標準に従う）
-- **テストケース**: 日本語で記述（国際的な開発標準に従う）
-- **変数名・関数名**: 英語
+- **AI Instructions**: Japanese
+- **AI Responses**: Japanese
+- **Comments**: Japanese (following international standards)
+- **Test Cases**: Japanese (following international standards)
+- **Variable/Function Names**: English
 
-### タスク管理
+### Task Management
 
-- 複雑なマルチステップタスクには TodoWrite ツールを使用
-- 大きな機能を管理しやすいステップに分割
-- 進捗を体系的に追跡
-- 完了後すぐに todo を完了マークする
+- Use TodoWrite tool for complex multi-step tasks
+- Break large features into manageable steps
+- Track progress systematically
+- Mark todos complete immediately after finishing
 
-### コード品質
+### Code Quality
 
-- 防御的セキュリティプラクティスに従う
-- 機密データや秘密情報を決して公開しない
-- 機密情報なしの適切なログ実装
-- コードベースの確立されたパターンを使用
+- Follow defensive security practices
+- Never expose sensitive data or secrets
+- Proper logging implementation without sensitive info
+- Use established patterns in codebase
 
-## 開発ワークフロー
+## Development Workflow
 
-### Git ワークフロー
+### Git Workflow
 
-- フィーチャーブランチで作業
-- 従来のコミットメッセージを使用
-- コードレビューのためのプルリクエスト作成
-- クリーンなコミット履歴を維持
+- Work on feature branches
+- Use conventional commit messages
+- Create pull requests for code review
+- Maintain clean commit history
 
-### テスト
+### Testing
 
-- Vitest を使用したユニット・統合テスト
-- ビジネスロジックのテストケース作成
-- API エンドポイントの統合テスト実行
-- フロントエンドコンポーネントのテスト
-- クリティカルパスのテストカバレッジ確保
-- 外部依存関係の適切なモックとスタブを使用
+- Unit & integration tests with Vitest
+- Create test cases for business logic
+- Run integration tests for API endpoints
+- Test frontend components
+- Ensure critical path test coverage
+- Use proper mocks and stubs for external dependencies
 
-### ドキュメンテーション
+### Documentation
 
-- 重要な変更時に README.md を更新 (VitePress で docs/ディレクトリがある場合はそちらを更新)
-- 適切なファイルで API の変更を文書化
-- 複雑なロジックにインラインコメントを維持
-- 簡潔で実用的なドキュメントを保持
+- Update README.md for important changes (or docs/ if using VitePress)
+- Document API changes in appropriate files
+- Maintain inline comments for complex logic
+- Keep documentation concise and practical
 
-## プロジェクト固有の注意事項
+## Project-Specific Notes
 
-### 現在のプロジェクト (aim-at-CMS-api)
+### Current Project (aim-at-CMS-api)
 
-- NestJS ベースの GraphQL API
-- MySQL データベースと Prisma
-- マイクロサービスアーキテクチャパターン
-- デコレーターの多用（@Retry, @Transactional）
-- トランザクション管理とデータベース接続最適化に重点
+- NestJS-based GraphQL API
+- MySQL database with Prisma
+- Microservice architecture patterns
+- Heavy use of decorators (@Retry, @Transactional)
+- Focus on transaction management and database connection optimization
 
-### 共通パターン
+### Common Patterns
 
-- Controller → Service → Repository アーキテクチャ
-- 複雑なビジネスロジックには UseCase パターン
-- データ変換のための DTO ファクトリー
-- カスタム例外による包括的なエラーハンドリング
-- データベース操作のリトライメカニズム
+- Controller → Service → Repository architecture
+- UseCase pattern for complex business logic
+- DTO factories for data transformation
+- Comprehensive error handling with custom exceptions
+- Retry mechanisms for database operations
 
-## DDD（ドメイン駆動設計）原則
+## DDD Principles
 
-### アーキテクチャ
+### Architecture
 
-- エンティティとバリューオブジェクトの明確な分離
-- ドメインサービスによるビジネスロジックの集約
-- リポジトリパターンによるデータアクセスの抽象化
-- アプリケーションサービスによるユースケースの実装
+- Clear separation of entities and value objects
+- Business logic aggregation through domain services
+- Data access abstraction via repository pattern
+- UseCase implementation through application services
 
-### 関数型プログラミング
+### Functional Programming
 
-- 副作用のない純粋関数を優先
-- イミュータブルなデータ構造の使用
-- 関数合成とパイプラインパターン
-- 命令型ループよりも map, filter, reduce を使用
+- Prioritize pure functions without side effects
+- Use immutable data structures
+- Function composition and pipeline patterns
+- Use map, filter, reduce over imperative loops
 
-## パフォーマンス考慮事項
+## Performance Considerations
 
-### データベース最適化
+### Database Optimization
 
-- オペレーションごとの単一データベース接続使用
-- 適切なトランザクション境界の実装
-- パフォーマンスのためのクエリ最適化
-- コネクションプール使用量の監視
+- Use single database connection per operation
+- Implement proper transaction boundaries
+- Optimize queries for performance
+- Monitor connection pool usage
 
-### フロントエンド最適化
+### Frontend Optimization
 
-- Next.js の SSR と SSG を適切に活用
-- 画像最適化と Core Web Vitals の改善
-- バンドルサイズの最適化
-- 適切なキャッシュ戦略の実装
+- Properly utilize Next.js SSR and SSG
+- Image optimization and Core Web Vitals improvement
+- Bundle size optimization
+- Implement proper caching strategies
 
-### コード最適化
+### Code Optimization
 
-- レスポンスでの出力トークンの最小化
-- 効率的なアルゴリズムとデータ構造の使用
-- メモリ使用量の監視と最適化
+- Minimize output tokens in responses
+- Use efficient algorithms and data structures
+- Monitor and optimize memory usage
 
-## セキュリティガイドライン
+## Security Guidelines
 
-### データ保護
+### Data Protection
 
-- 機密情報を決してログに記録しない
-- 適切な入力値検証の実装
-- SQL インジェクション防止のためのパラメータ化クエリ使用
-- 適切な認証と認可の適用
+- Never log sensitive information
+- Implement proper input validation
+- Use parameterized queries to prevent SQL injection
+- Apply proper authentication and authorization
 
-### コードセキュリティ
+### Code Security
 
-- セキュアコーディング実践に従う
-- 依存関係の定期的な更新
-- セキュリティリンターとスキャナーの使用
-- 情報漏洩のない適切なエラーハンドリング
-
----
-
-*この設定は dotfiles で管理され、開発環境間で自動的に同期されます。*
+- Follow secure coding practices
+- Regular dependency updates
+- Use security linters and scanners
+- Proper error handling without information leakage

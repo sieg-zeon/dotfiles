@@ -99,6 +99,7 @@ alias ac="atcoder-tools"
 alias pn="pnpm"
 alias pud="pair_or_unpair_device"
 alias cc='claude --dangerously-skip-permissions'
+alias dotfiles="code ~/dotfiles"
 
 # 仕事用などで使うエイリアス
 if [ -f ~/dotfiles/alias.sh ]; then

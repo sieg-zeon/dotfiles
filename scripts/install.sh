@@ -24,14 +24,6 @@ ln -sf ~/dotfiles/zsh/.zshrc ~/.zshrc
 ln -sf ~/dotfiles/mise/.tool-versions ~/.tool-versions
 ln -sf ~/dotfiles/atcoder/.atcodertools.toml ~/.atcodertools.toml
 ln -sf ~/dotfiles/git/.gitconfig ~/.gitconfig # configを分ける場合は、unlink ~/.gitconfig
-# claude
-mkdir -p ~/.claude
-ln -sf ~/dotfiles/claude/settings.json ~/.claude/settings.json
-ln -sf ~/dotfiles/claude/CLAUDE.md ~/.claude/CLAUDE.md
-# gemini
-mkdir -p ~/.gemini
-ln -sf ~/dotfiles/gemini/GEMINI.md ~/.gemini/GEMINI.md
-echo "--- Create symbolic link is Done! ---"
 
 # Homebrew
 if [ -z "$(command -v brew)" ]; then

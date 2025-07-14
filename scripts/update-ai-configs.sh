@@ -35,7 +35,6 @@ echo ""
 # mcp設定
 claude mcp add playwright -s user npx @playwright/mcp@latest # https://github.com/microsoft/playwright-mcp
 claude mcp add context7 -s user npx @upstash/context7-mcp    # https://github.com/upstash/context7
-claude mcp add markitdown -s user uvx markitdown-mcp         # https://github.com/microsoft/markitdown/tree/main/packages/markitdown-mcp
 claude mcp add youtube -s user npx @anaisbetts/mcp-youtube   # https://github.com/anaisbetts/mcp-youtube
 
 # シンボリックリンクの確認と作成

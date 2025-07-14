@@ -32,6 +32,12 @@ fi
 
 echo ""
 
+# mcp設定
+claude mcp add playwright -s user npx @playwright/mcp@latest # https://github.com/microsoft/playwright-mcp
+claude mcp add context7 -s user npx @upstash/context7-mcp    # https://github.com/upstash/context7
+claude mcp add markitdown -s user uvx markitdown-mcp         # https://github.com/microsoft/markitdown/tree/main/packages/markitdown-mcp
+claude mcp add youtube -s user npx @anaisbetts/mcp-youtube   # https://github.com/anaisbetts/mcp-youtube
+
 # シンボリックリンクの確認と作成
 echo "Checking symbolic links..."
 
@@ -54,6 +60,15 @@ if [ ! -L "$HOME/.claude/CLAUDE.md" ]; then
     echo "✅ Claude CLAUDE.md symbolic link created: ~/.claude/CLAUDE.md"
 else
     echo "✅ Claude CLAUDE.md symbolic link already exists"
+fi
+
+# Gemini settings.json
+if [ ! -L "$HOME/.gemini/settings.json" ]; then
+    echo "Creating Gemini settings.json symbolic link..."
+    ln -sf "$GEMINI_DIR/settings.json" "$HOME/.gemini/settings.json"
+    echo "✅ Gemini settings.json symbolic link created: ~/.gemini/settings.json"
+else
+    echo "✅ Gemini settings.json symbolic link already exists"
 fi
 
 # Gemini用シンボリックリンクの確認
@@ -101,6 +116,7 @@ echo ""
 echo "🔗 Symbolic links:"
 echo "   ~/.claude/settings.json → $CLAUDE_DIR/settings.json"
 echo "   ~/.claude/CLAUDE.md     → $CLAUDE_DIR/CLAUDE.md"
+echo "   ~/.gemini/settings.json → $GEMINI_DIR/settings.json"
 echo "   ~/.gemini/GEMINI.md     → $GEMINI_DIR/GEMINI.md"
 echo ""
 echo "✏️  To edit common rules:"

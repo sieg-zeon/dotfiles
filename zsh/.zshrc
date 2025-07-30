@@ -162,5 +162,3 @@ eval "$(gh completion -s zsh)"
 # tiup: https://docs.pingcap.com/ja/tidb/stable/tiup-overview#install-tiup
 export PATH=$HOME/.tiup/bin:$PATH
 # ↑ Remove the same path of the above line
-
-. "$HOME/.local/bin/env"

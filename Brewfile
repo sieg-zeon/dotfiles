@@ -27,6 +27,7 @@ brew "mise"
 brew "mas"
 brew "hadolint"
 brew "blueutil"
+brew "uv"
 
 # Desktop Apps
 
@@ -38,9 +39,7 @@ cask "docker"
 cask "postman"
 cask "slack"
 cask "discord"
-cask "zoom"
 cask "clipy"
-cask "chatgpt"
 cask "mysqlworkbench"
 cask "deepl"
 

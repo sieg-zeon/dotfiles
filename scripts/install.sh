@@ -79,6 +79,9 @@ curl --proto '=https' --tlsv1.2 -sSf https://tiup-mirrors.pingcap.com/install.sh
 sudo ln -s ~/dotfiles/scripts/pair_or_unpair_device.sh /usr/local/bin/pair_or_unpair_device
 chmod 755 /usr/local/bin/pair_or_unpair_device
 
+# gh setup
+gh config set editor "code --wait"
+
 # AI configuration files update
 echo "--- Update AI configuration files is Start! ---"
 chmod +x ~/dotfiles/scripts/update-ai-configs.sh

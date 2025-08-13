@@ -28,6 +28,7 @@ brew "mas"
 brew "hadolint"
 brew "blueutil"
 brew "uv"
+brew "gh"
 
 # Desktop Apps
 

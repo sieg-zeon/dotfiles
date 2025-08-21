@@ -99,7 +99,7 @@ alias ac="atcoder-tools"
 alias pn="pnpm"
 alias pud="pair_or_unpair_device"
 alias cc='claude --dangerously-skip-permissions'
-alias dotfiles="cursor ~/dotfiles"
+alias dotfiles="code ~/dotfiles"
 alias serena-cc="claude mcp add serena -- uvx --from git+https://github.com/oraios/serena serena-mcp-server --context ide-assistant --project $(pwd)"
 
 # 仕事用などで使うエイリアス

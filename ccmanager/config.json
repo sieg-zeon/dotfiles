@@ -30,7 +30,7 @@
         "name": "Claude Code (Resume & YOLO)",
         "command": "claude",
         "args": ["--resume", "--dangerously-skip-permissions"],
-        "fallbackArgs": []
+        "fallbackArgs": ["--dangerously-skip-permissions"]
       },
       {
         "id": "gemini-default",

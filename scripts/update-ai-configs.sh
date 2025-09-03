@@ -6,10 +6,12 @@ DOTFILES_DIR="$HOME/dotfiles"
 COMMON_FILE="$DOTFILES_DIR/common/development-rules.md"
 CLAUDE_DIR="$DOTFILES_DIR/claude"
 GEMINI_DIR="$DOTFILES_DIR/gemini"
+CCMANAGER_DIR="$DOTFILES_DIR/ccmanager"
 
 # ディレクトリが存在しない場合は作成
 mkdir -p "$CLAUDE_DIR"
 mkdir -p "$GEMINI_DIR"
+mkdir -p "$CCMANAGER_DIR"
 
 echo "--- Updating AI configuration files ---"
 
@@ -29,13 +31,6 @@ if npm install -g @google/gemini-cli 2>/dev/null; then
 else
     echo "⚠️  Gemini CLI installation failed (might already be installed or need permissions)"
 fi
-
-echo ""
-
-# mcp設定
-claude mcp add playwright -s user npx @playwright/mcp@latest # https://github.com/microsoft/playwright-mcp
-claude mcp add context7 -s user npx @upstash/context7-mcp    # https://github.com/upstash/context7
-claude mcp add youtube -s user npx @anaisbetts/mcp-youtube   # https://github.com/anaisbetts/mcp-youtube
 
 # シンボリックリンクの確認と作成
 echo "Checking symbolic links..."
@@ -106,6 +101,12 @@ GEMINI_EOF
 # 共通ファイルの内容を追加
 cat "$COMMON_FILE" >>"$GEMINI_DIR/GEMINI.md"
 
+# ccmanagerのインストール
+echo "ccmanagerのインストール..."
+npm install -g ccmanager
+# ccmanagerの設定ファイルをシンボリックリンク
+ln -sf "$CCMANAGER_DIR/config.json" "$HOME/.config/ccmanager/config.json"
+
 echo "--- AI configuration files updated successfully ---"
 echo "📁 Source files:"
 echo "   Common rules: $COMMON_FILE"
@@ -117,6 +118,7 @@ echo "   ~/.claude/settings.json → $CLAUDE_DIR/settings.json"
 echo "   ~/.claude/CLAUDE.md     → $CLAUDE_DIR/CLAUDE.md"
 echo "   ~/.gemini/settings.json → $GEMINI_DIR/settings.json"
 echo "   ~/.gemini/GEMINI.md     → $GEMINI_DIR/GEMINI.md"
+echo "   ~/.config/ccmanager/config.json → $CCMANAGER_DIR/config.json"
 echo ""
 echo "✏️  To edit common rules:"
 echo "   code $COMMON_FILE"

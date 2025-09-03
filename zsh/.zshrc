@@ -98,9 +98,10 @@ alias ac-test="chmod 755 main.py && atcoder-tools test"
 alias ac="atcoder-tools"
 alias pn="pnpm"
 alias pud="pair_or_unpair_device"
-alias cc='claude --dangerously-skip-permissions'
+alias cc='claude'
+alias ccd='claude --dangerously-skip-permissions'
 alias dotfiles="code ~/dotfiles"
-alias serena-cc="claude mcp add serena -- uvx --from git+https://github.com/oraios/serena serena-mcp-server --context ide-assistant --project $(pwd)"
+alias ccm='ccmanager'
 
 # 仕事用などで使うエイリアス
 if [ -f ~/dotfiles/alias.sh ]; then

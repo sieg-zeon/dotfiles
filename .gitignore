@@ -20,6 +20,8 @@
 !/LICENCE
 !.gitignore
 
+!ccmanager/
+
 alias.sh
 
 # Generated AI configuration files (auto-generated from common/development-rules.md)

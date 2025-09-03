@@ -3,6 +3,12 @@
     "autoDirectory": true,
     "autoDirectoryPattern": "../{branch}"
   },
+  "worktreeHooks": {
+    "post_creation": {
+      "command": "$HOME/.config/ccmanager/copy-untracked-files.sh \"$CCMANAGER_GIT_ROOT\" \"$CCMANAGER_WORKTREE_PATH\" && code \"$CCMANAGER_WORKTREE_PATH\" && cd \"$CCMANAGER_WORKTREE_PATH\" && ni",
+      "enabled": true
+    }
+  },
   "commandPresets": {
     "presets": [
       {
@@ -17,6 +23,13 @@
         "name": "Claude Code (YOLO)",
         "command": "claude",
         "args": ["--dangerously-skip-permissions"],
+        "fallbackArgs": []
+      },
+      {
+        "id": "claude-resume-yolo",
+        "name": "Claude Code (Resume & YOLO)",
+        "command": "claude",
+        "args": ["--resume", "--dangerously-skip-permissions"],
         "fallbackArgs": []
       },
       {

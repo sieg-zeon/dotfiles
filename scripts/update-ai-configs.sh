@@ -106,6 +106,14 @@ echo "ccmanagerのインストール..."
 npm install -g ccmanager
 # ccmanagerの設定ファイルをシンボリックリンク
 ln -sf "$CCMANAGER_DIR/config.json" "$HOME/.config/ccmanager/config.json"
+# ccmanagerのスクリプトファイルもシンボリックリンク
+for script in "$CCMANAGER_DIR"/*.sh; do
+    if [ -f "$script" ]; then
+        script_name=$(basename "$script")
+        ln -sf "$script" "$HOME/.config/ccmanager/$script_name"
+        echo "✅ ccmanager script symbolic link created: ~/.config/ccmanager/$script_name"
+    fi
+done
 
 echo "--- AI configuration files updated successfully ---"
 echo "📁 Source files:"
@@ -119,6 +127,7 @@ echo "   ~/.claude/CLAUDE.md     → $CLAUDE_DIR/CLAUDE.md"
 echo "   ~/.gemini/settings.json → $GEMINI_DIR/settings.json"
 echo "   ~/.gemini/GEMINI.md     → $GEMINI_DIR/GEMINI.md"
 echo "   ~/.config/ccmanager/config.json → $CCMANAGER_DIR/config.json"
+echo "   ~/.config/ccmanager/*.sh → $CCMANAGER_DIR/*.sh"
 echo ""
 echo "✏️  To edit common rules:"
 echo "   code $COMMON_FILE"

@@ -25,7 +25,7 @@
         "name": "Claude Code (Resume)",
         "command": "claude",
         "args": ["--resume"],
-        "fallbackArgs": []
+        "fallbackArgs": ["--dangerously-skip-permissions"]
       },
       {
         "id": "claude-yolo",

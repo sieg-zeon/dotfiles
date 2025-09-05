@@ -1,4 +1,13 @@
 {
+  "shortcuts": {
+    "returnToMenu": {
+      "ctrl": true,
+      "key": "r"
+    },
+    "cancel": {
+      "key": "escape"
+    }
+  },
   "worktree": {
     "autoDirectory": true,
     "autoDirectoryPattern": "../{branch}"

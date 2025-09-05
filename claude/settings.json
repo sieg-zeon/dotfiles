@@ -2,7 +2,7 @@
   "model": "opus",
   "permissions": {
     "allow": ["Bash(npm:*)", "Bash(yarn:*)", "Bash(git:*)", "Bash(npm run lint)", "Bash(npm run test)", "Read(./.env)", "Read(./src/*)", "Write(./src/*)", "Edit(./docs/*)"],
-    "deny": ["Bash(rm:*)", "Bash(sudo:*)", "Read(./secrets/*)", "Write(./.env)"]
+    "deny": ["Bash(sudo:*)", "Read(./secrets/*)", "Write(./.env)"]
   },
   "hooks": {
     "Notification": [

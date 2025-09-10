@@ -115,6 +115,17 @@ for script in "$CCMANAGER_DIR"/*.sh; do
     fi
 done
 
+# claudecodeui のinstall
+mkdir -p "$HOME/projects"
+if [ ! -d "$HOME/projects/claudecodeui" ]; then
+    echo "Installing claudecodeui..."
+    git clone https://github.com/siteboon/claudecodeui.git
+    cd claudecodeui
+    npm install
+    cp .env.example .env
+fi
+
+
 echo "--- AI configuration files updated successfully ---"
 echo "📁 Source files:"
 echo "   Common rules: $COMMON_FILE"

@@ -1,8 +1,8 @@
 {
   "model": "opus",
   "permissions": {
-    "allow": ["Bash(npm:*)", "Bash(yarn:*)", "Bash(git:*)", "Bash(npm run lint)", "Bash(npm run test)", "Read(./.env)", "Read(./src/*)", "Write(./src/*)", "Edit(./docs/*)"],
-    "deny": ["Bash(sudo:*)", "Read(./secrets/*)", "Write(./.env)"]
+    "allow": ["Bash(npm:*)", "Bash(yarn:*)", "Bash(git:*)", "Bash(nr lint)", "Bash(nr test)", "Read(./.env)", "Read(./src/*)", "Write(./src/*)", "Edit(./docs/*)"],
+    "deny": ["Bash(sudo:*)", "Read(./secrets/*)"]
   },
   "hooks": {
     "Notification": [

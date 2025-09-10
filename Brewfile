@@ -29,6 +29,7 @@ brew "hadolint"
 brew "blueutil"
 brew "uv"
 brew "gh"
+brew "tailscale"
 
 # Desktop Apps
 

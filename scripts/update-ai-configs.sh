@@ -112,20 +112,27 @@ for script in "$CCMANAGER_DIR"/*.sh; do
         script_name=$(basename "$script")
         ln -sf "$script" "$HOME/.config/ccmanager/$script_name"
         echo "✅ ccmanager script symbolic link created: ~/.config/ccmanager/$script_name"
+        echo ""
     fi
 done
 
 # claudecodeui のinstall
+# 参考: https://zenn.dev/nogu66/articles/claudecodeui
 mkdir -p "$HOME/projects"
 if [ ! -d "$HOME/projects/claudecodeui" ]; then
     echo "Installing claudecodeui..."
-    git clone https://github.com/siteboon/claudecodeui.git
-    cd claudecodeui
+    git clone https://github.com/siteboon/claudecodeui.git "$HOME/projects/claudecodeui"
+    cd "$HOME/projects/claudecodeui"
     npm install
     cp .env.example .env
+    cd -
+    echo "✅ claudecodeui installed at $HOME/projects/claudecodeui"
+else
+    echo "⚠️ claudecodeui already installed: $HOME/projects/claudecodeui"
 fi
 
 
+echo ""
 echo "--- AI configuration files updated successfully ---"
 echo "📁 Source files:"
 echo "   Common rules: $COMMON_FILE"

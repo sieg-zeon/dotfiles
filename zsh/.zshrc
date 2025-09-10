@@ -102,6 +102,8 @@ alias cc='claude'
 alias ccd='claude --dangerously-skip-permissions'
 alias dotfiles="code ~/dotfiles"
 alias ccm='ccmanager'
+alias ccui="cd ~/projects/claudecodeui && npm run dev"
+alias tunnel-ccui="ccui & cloudflared tunnel run macbook.jion-claude-code-ui.work"
 
 # 仕事用などで使うエイリアス
 if [ -f ~/dotfiles/alias.sh ]; then

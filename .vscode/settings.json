@@ -5,6 +5,9 @@
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
   "editor.codeActionsOnSave": ["source.organizeImports", "source.fixAll.eslint"],
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
+  "files.insertFinalNewline": true,
   "search.exclude": {
     "@generated/*": true
   },
@@ -38,5 +41,13 @@
     // NOTE: no-empty-links: No empty links
     "MD042": false
   },
-  "cSpell.words": ["ccmanager", "claudecodeui"]
+  "cSpell.words": [
+    "atcoder",
+    "atcodertools",
+    "blueutil",
+    "ccmanager",
+    "claudecodeui",
+    "Trackpad",
+    "unpair"
+  ]
 }

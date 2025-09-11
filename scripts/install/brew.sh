@@ -18,10 +18,10 @@ fi
 if which /opt/homebrew/bin/brew >/dev/null 2>&1; then
     echo "Running brew doctor..."
     brew doctor
-    
+
     echo "Updating Homebrew..."
     brew update --verbose
-    
+
     echo "Upgrading packages..."
     brew upgrade --verbose
 fi

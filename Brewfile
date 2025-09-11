@@ -2,8 +2,6 @@ cask_args appdir: "/Applications"
 
 brew "openssl@3"
 brew "readline"
-brew "curl"
-brew "git"
 brew "coreutils"
 brew "direnv"
 brew "gh"

@@ -35,7 +35,7 @@ if type brew &>/dev/null; then
 fi
 
 # check_update_dotfiles
-source ~/dotfiles/zsh/.zshrc.check_update_dotfiles
+source ~/dotfiles/config/zsh/.zshrc.check_update_dotfiles
 
 # 環境変数
 typeset -U path PATH

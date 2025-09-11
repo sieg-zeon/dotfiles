@@ -26,6 +26,7 @@ brew "mas"
 brew "hadolint"
 brew "blueutil"
 brew "uv"
+brew "supabase/tap/supabase"
 
 # Desktop Apps
 

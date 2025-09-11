@@ -1,26 +1,24 @@
 
 ### not ignore ###
-!/claude/
-!/claude/settings.json
 !/common/
-!/gemini/
+!/config/
+!/.claude/
+!/.gemini/
+!/.ccmanager/
 !/Brewfile
 !/Brewfile.lock.json
-!/scripts
+!/scripts/
 !/mise/
 !/atcoder/
-!/zsh/
-!/git/
-!/vim/
+!/.vscode/
 
 !/README.md
 !/LICENCE
 !.gitignore
 
-!ccmanager/
-
+# Temporary files
 alias.sh
 
-# Generated AI configuration files (auto-generated from common/development-rules.md)
-claude/CLAUDE.md
-gemini/GEMINI.md
+# Backup and work directories
+/backup/
+/refactoring-tasks/

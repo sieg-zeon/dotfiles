@@ -28,7 +28,6 @@ brew "mas"
 brew "hadolint"
 brew "blueutil"
 brew "uv"
-brew "gh"
 
 # Desktop Apps
 
@@ -44,6 +43,5 @@ cask "clipy"
 cask "mysqlworkbench"
 cask "deepl"
 
-brew "mas"
 mas "Xcode", id: 497799835
 mas "LINE", id: 539883307

@@ -75,31 +75,20 @@ else
     echo "✅ Gemini symbolic link already exists"
 fi
 
-echo ""
+# ホームディレクトリに直接シンボリックリンクを作成
+echo "Creating symbolic links for AI configs..."
 
-# Claude用ファイルの生成
-echo "Generating CLAUDE.md..."
-cat >"$CLAUDE_DIR/CLAUDE.md" <<'CLAUDE_EOF'
-# Claude Code Configuration
+# Claude用シンボリックリンク
+if [ ! -L "$HOME/.claude/CLAUDE.md" ]; then
+    ln -sf "$DOTFILES_DIR/common/development-rules.md" "$HOME/.claude/CLAUDE.md"
+    echo "✅ Created: ~/.claude/CLAUDE.md -> ~/dotfiles/common/development-rules.md"
+fi
 
-This file defines the Claude Code settings and development policies common to all projects.
-
-CLAUDE_EOF
-
-# 共通ファイルの内容を追加
-cat "$COMMON_FILE" >>"$CLAUDE_DIR/CLAUDE.md"
-
-# Gemini用ファイルの生成
-echo "Generating GEMINI.md..."
-cat >"$GEMINI_DIR/GEMINI.md" <<'GEMINI_EOF'
-# Gemini CLI Configuration
-
-This file defines the Gemini CLI settings and development policies common to all projects.
-
-GEMINI_EOF
-
-# 共通ファイルの内容を追加
-cat "$COMMON_FILE" >>"$GEMINI_DIR/GEMINI.md"
+# Gemini用シンボリックリンク
+if [ ! -L "$HOME/.gemini/GEMINI.md" ]; then
+    ln -sf "$DOTFILES_DIR/common/development-rules.md" "$HOME/.gemini/GEMINI.md"
+    echo "✅ Created: ~/.gemini/GEMINI.md -> ~/dotfiles/common/development-rules.md"
+fi
 
 # ccmanagerのインストール
 echo "ccmanagerのインストール..."
@@ -133,19 +122,11 @@ fi
 
 echo ""
 echo "--- AI configuration files updated successfully ---"
-echo "📁 Source files:"
-echo "   Common rules: $COMMON_FILE"
-echo "   Claude config: $CLAUDE_DIR/CLAUDE.md"
-echo "   Gemini config: $GEMINI_DIR/GEMINI.md"
-echo ""
 echo "🔗 Symbolic links:"
-echo "   ~/.claude/settings.json → $CLAUDE_DIR/settings.json"
-echo "   ~/.claude/CLAUDE.md     → $CLAUDE_DIR/CLAUDE.md"
-echo "   ~/.gemini/settings.json → $GEMINI_DIR/settings.json"
-echo "   ~/.gemini/GEMINI.md     → $GEMINI_DIR/GEMINI.md"
-echo "   ~/.config/ccmanager/config.json → $CCMANAGER_DIR/config.json"
-echo "   ~/.config/ccmanager/*.sh → $CCMANAGER_DIR/*.sh"
+echo "   ~/.claude/CLAUDE.md → ~/dotfiles/common/development-rules.md"
+echo "   ~/.gemini/GEMINI.md → ~/dotfiles/common/development-rules.md"
+echo "   ~/.claude/settings.json → ~/dotfiles/.claude/settings.json"
+echo "   ~/.gemini/settings.json → ~/dotfiles/.gemini/settings.json"
 echo ""
 echo "✏️  To edit common rules:"
 echo "   code $COMMON_FILE"
-echo "   Then run this script again to update both configs."

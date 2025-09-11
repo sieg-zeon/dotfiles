@@ -7,13 +7,11 @@ COMMON_FILE="$DOTFILES_DIR/common/development-rules.md"
 CLAUDE_DIR="$DOTFILES_DIR/.claude"
 GEMINI_DIR="$DOTFILES_DIR/.gemini"
 CCMANAGER_DIR="$DOTFILES_DIR/.ccmanager"
-SERENA_DIR="$DOTFILES_DIR/.serena"
 
 # ディレクトリが存在しない場合は作成
 mkdir -p "$CLAUDE_DIR"
 mkdir -p "$GEMINI_DIR"
 mkdir -p "$CCMANAGER_DIR"
-mkdir -p "$SERENA_DIR"
 
 echo "--- Updating AI configuration files ---"
 
@@ -133,16 +131,6 @@ else
     echo "⚠️ claudecodeui already installed: $HOME/projects/claudecodeui"
 fi
 
-# serenaディレクトリのシンボリックリンク
-if [ ! -L "$HOME/.serena" ]; then
-    echo "Creating Serena symbolic link..."
-    mkdir -p "$HOME/.serena"
-    ln -sf "$SERENA_DIR/serena_config.yml" "$HOME/.serena/serena_config.yml"
-    echo "✅ Serena symbolic link created: ~/.serena/serena_config.yml"
-else
-    echo "✅ Serena symbolic link already exists"
-fi
-
 echo ""
 echo "--- AI configuration files updated successfully ---"
 echo "📁 Source files:"
@@ -157,7 +145,6 @@ echo "   ~/.gemini/settings.json → $GEMINI_DIR/settings.json"
 echo "   ~/.gemini/GEMINI.md     → $GEMINI_DIR/GEMINI.md"
 echo "   ~/.config/ccmanager/config.json → $CCMANAGER_DIR/config.json"
 echo "   ~/.config/ccmanager/*.sh → $CCMANAGER_DIR/*.sh"
-echo "   ~/.serena/serena_config.yml → $SERENA_DIR/serena_config.yml"
 echo ""
 echo "✏️  To edit common rules:"
 echo "   code $COMMON_FILE"

@@ -41,22 +41,20 @@ ensure_directory() {
     fi
 }
 
-# Install npm package globally if not already installed
+# Install or update npm package globally
 install_npm_package() {
     local package="$1"
     local command="${2:-$(echo $package | sed 's/@.*\///' | sed 's/@.*//')}"
     local description="${3:-$package}"
 
-    if ! command -v "$command" >/dev/null 2>&1; then
-        echo "Installing $description..."
-        if npm install -g "$package" 2>/dev/null; then
-            echo "  ✅ $description installed successfully"
-        else
-            echo "  ⚠️  $description installation failed (might need permissions)"
-            return 1
-        fi
+    echo "Installing/updating $description..."
+
+    # Always install/update to ensure latest version
+    if npm install -g "$package@latest" 2>/dev/null; then
+        echo "  ✅ $description installed/updated successfully"
     else
-        echo "  ✓ $description already installed"
+        echo "  ⚠️  $description installation/update failed (might need permissions)"
+        return 1
     fi
     return 0
 }

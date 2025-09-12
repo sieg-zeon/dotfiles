@@ -23,13 +23,7 @@ create_symlink "$DOTFILES_DIR/config/git/.gitconfig" ~/.gitconfig ".gitconfig"
 ensure_directory ~/.config/git
 create_symlink "$DOTFILES_DIR/config/git/ignore" ~/.config/git/ignore "git ignore"
 
-# AI tools configuration
-echo "Setting up AI tools links..."
-setup_ai_tool "claude"
-setup_ai_tool "gemini"
-
-# ccmanager
-setup_ccmanager "$DOTFILES_DIR/.ccmanager"
+# Note: AI tools configuration moved to ai-tools.sh
 
 # Utilities
 echo "Creating utility links..."

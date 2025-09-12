@@ -18,18 +18,19 @@ dotfiles/
 │   └── vim/                   # Vim設定
 │       └── .vimrc
 ├── .claude/                   # Claude Code設定
-│   ├── CLAUDE.md → ../common/development-rules.md
 │   └── settings.json
 ├── .gemini/                   # Gemini CLI設定
-│   ├── GEMINI.md → ../common/development-rules.md
 │   └── settings.json
+├── .ccmanager/                # ccmanager設定
+│   └── config.json
 ├── scripts/                   # 各種スクリプト
 │   ├── install/              # インストールスクリプト
+│   │   ├── common.sh         # 共通関数
 │   │   ├── setup.sh          # メインセットアップ
 │   │   ├── brew.sh           # Homebrew管理
 │   │   ├── symlinks.sh       # シンボリックリンク作成
 │   │   ├── dev-tools.sh      # 開発ツール
-│   │   └── ai-tools.sh       # AIツール
+│   │   └── ai-tools.sh       # AIツール＆設定更新
 │   └── utils/                # ユーティリティ
 │       └── pair_or_unpair_device.sh
 ├── mise/                      # mise設定
@@ -70,7 +71,7 @@ bash ~/dotfiles/scripts/install/symlinks.sh
 # 開発ツールのみ
 bash ~/dotfiles/scripts/install/dev-tools.sh
 
-# AIツールのみ
+# AIツール＆設定更新
 bash ~/dotfiles/scripts/install/ai-tools.sh
 ```
 
@@ -80,6 +81,8 @@ bash ~/dotfiles/scripts/install/ai-tools.sh
 
 - **Claude Code**: Anthropic 公式 CLI ツール
 - **Gemini CLI**: Google Gemini CLI ツール
+- **ccmanager**: Claude Code Manager
+- **claudecodeui**: Claude Code UI (Web interface)
 - **共通ルール管理**: `common/development-rules.md`を全 AI ツールで共有
 
 ### 自動チェック機能
@@ -144,6 +147,12 @@ bash scripts/install/setup.sh
 
 ```bash
 bash ~/dotfiles/scripts/install/symlinks.sh
+```
+
+AI設定の更新:
+
+```bash
+bash ~/dotfiles/scripts/install/ai-tools.sh
 ```
 
 Homebrew 関連の問題:

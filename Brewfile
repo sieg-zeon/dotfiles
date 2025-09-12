@@ -44,3 +44,4 @@ cask "deepl"
 
 mas "Xcode", id: 497799835
 mas "LINE", id: 539883307
+mas "Kindle", id: 302584613

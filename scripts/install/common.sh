@@ -25,7 +25,7 @@ create_symlink() {
         fi
     elif [ -e "$target" ]; then
         echo "  ⚠️  $target exists but is not a symbolic link, skipping"
-        return 1
+        return 0
     fi
 
     ln -sf "$source" "$target"

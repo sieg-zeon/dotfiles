@@ -27,6 +27,7 @@ brew "hadolint"
 brew "blueutil"
 brew "uv"
 brew "supabase/tap/supabase"
+brew "redis"
 
 # Desktop Apps
 

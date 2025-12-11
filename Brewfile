@@ -28,6 +28,7 @@ brew "blueutil"
 brew "uv"
 brew "supabase/tap/supabase"
 brew "redis"
+brew "glab"
 
 # Desktop Apps
 

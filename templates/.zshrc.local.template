@@ -1,0 +1,13 @@
+# ローカル環境専用の設定（git管理外）
+# このファイルには機密情報を記載してください
+
+# GitHub Personal Access Token (GitHub MCP用)
+# 新規作成: https://github.com/settings/personal-access-tokens/new
+#   Repository access: All repositories
+#   Permissions: Issues (Read and write), Metadata (Read-only)
+# 既存トークン再生成: https://github.com/settings/personal-access-tokens
+#   対象トークンを選択 → "Regenerate token" をクリック
+# 確認方法: echo $GITHUB_PERSONAL_ACCESS_TOKEN
+export GITHUB_PERSONAL_ACCESS_TOKEN=
+
+# 他の機密情報があればここに追加

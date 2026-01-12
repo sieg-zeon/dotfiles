@@ -36,8 +36,10 @@ if command -v claude &> /dev/null; then
     claude mcp add playwright -s user -- npx @playwright/mcp@latest 2>/dev/null || true
     claude mcp add context7 -s user -- npx @upstash/context7-mcp 2>/dev/null || true
     claude mcp add youtube -s user -- npx @anaisbetts/mcp-youtube 2>/dev/null || true
-    # github MCPは環境変数GITHUB_PERSONAL_ACCESS_TOKENが必要（~/.zshrc.localで設定）
-    claude mcp add github -s user -e GITHUB_PERSONAL_ACCESS_TOKEN="$GITHUB_PERSONAL_ACCESS_TOKEN" -- npx -y @modelcontextprotocol/server-github 2>/dev/null || true
+    # github MCPは環境変数が必要（~/.zshrc.localで設定）
+    # - GITHUB_PERSONAL_ACCESS_TOKEN: アクセストークン
+    # - GITHUB_OWNER: デフォルトのリポジトリオーナー名
+    claude mcp add github -s user -e GITHUB_PERSONAL_ACCESS_TOKEN="$GITHUB_PERSONAL_ACCESS_TOKEN" -e GITHUB_OWNER="${GITHUB_OWNER:-}" -- npx -y @modelcontextprotocol/server-github 2>/dev/null || true
     # Notion MCP (OAuth認証が必要、Claude Code内で /mcp から認証)
     claude mcp add Notion -s user -t http https://mcp.notion.com/mcp 2>/dev/null || true
     echo "✅ MCP servers registered (playwright, context7, youtube, github, Notion)"

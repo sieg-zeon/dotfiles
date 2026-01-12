@@ -10,4 +10,8 @@
 # 確認方法: echo $GITHUB_PERSONAL_ACCESS_TOKEN
 export GITHUB_PERSONAL_ACCESS_TOKEN=
 
+# GitHub Owner (GitHub MCP用デフォルトオーナー名)
+# 確認方法: echo $GITHUB_OWNER
+export GITHUB_OWNER="sieg-zeon"
+
 # 他の機密情報があればここに追加

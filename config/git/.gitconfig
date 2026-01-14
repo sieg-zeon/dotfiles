@@ -7,8 +7,8 @@
 	    pl = pull
 	    ps = ps
 [user]
-        name = jion_kozono
-        email = zeon66190329@gmail.com
+	name = jion_kozono
+	email = zeon66190329@gmail.com
 [init]
 	defaultBranch = main
 [credential]

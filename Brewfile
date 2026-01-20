@@ -45,6 +45,7 @@ cask "clipy"
 cask "mysqlworkbench"
 cask "deepl"
 cask "android-studio"
+cask "localsend"
 
 mas "Xcode", id: 497799835
 mas "LINE", id: 539883307

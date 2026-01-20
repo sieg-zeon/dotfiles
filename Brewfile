@@ -29,6 +29,7 @@ brew "uv"
 brew "supabase/tap/supabase"
 brew "redis"
 brew "glab"
+brew "expo-orbit"
 
 # Desktop Apps
 

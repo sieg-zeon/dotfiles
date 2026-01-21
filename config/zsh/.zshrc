@@ -144,6 +144,9 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 export VOLTA_FEATURE_PNPM=1
+# Java 17 (Android Gradle Plugin)
+export JAVA_HOME=/opt/homebrew/opt/openjdk@17
+
 # android emulator
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator

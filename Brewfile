@@ -30,6 +30,7 @@ brew "supabase/tap/supabase"
 brew "redis"
 brew "glab"
 brew "expo-orbit"
+brew "cocoapods"
 
 # Desktop Apps
 

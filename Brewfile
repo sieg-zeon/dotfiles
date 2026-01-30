@@ -45,8 +45,12 @@ cask "discord"
 cask "clipy"
 cask "mysqlworkbench"
 cask "deepl"
+<<<<<<< Updated upstream
 cask "android-studio"
 cask "localsend"
+=======
+cask "loom"
+>>>>>>> Stashed changes
 
 mas "Xcode", id: 497799835
 mas "LINE", id: 539883307

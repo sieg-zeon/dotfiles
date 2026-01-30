@@ -130,8 +130,8 @@ esac
 
 # エディタ
 export EDITOR=vscode
-# postgres
-export PATH=$PATH:/opt/homebrew/Cellar/postgresql@14/10.22_4/bin
+# postgres (libpq: クライアントツールのみ)
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 # direnv
 eval "$(direnv hook zsh)"
 # mise

@@ -15,8 +15,14 @@ echo "--- AI Tools Setup ---"
 # Install AI CLI tools
 echo "Installing AI CLI tools..."
 
-# Claude Code
-install_npm_package "@anthropic-ai/claude-code" "claude" "Claude Code"
+# Claude Code (native installer)
+if command -v claude &> /dev/null; then
+    echo "Updating Claude Code..."
+    claude update 2>/dev/null && echo "  ✅ Claude Code updated" || echo "  ⚠️  Claude Code update failed"
+else
+    echo "Installing Claude Code (native installer)..."
+    curl -fsSL https://claude.ai/install.sh | bash && echo "  ✅ Claude Code installed" || echo "  ⚠️  Claude Code installation failed"
+fi
 
 # Gemini CLI
 install_npm_package "@google/gemini-cli" "gemini" "Gemini CLI"

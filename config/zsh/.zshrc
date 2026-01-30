@@ -40,6 +40,7 @@ source ~/dotfiles/config/zsh/.zshrc.check_update_dotfiles
 # 環境変数
 typeset -U path PATH
 path=(
+    $HOME/.local/bin(N)
     /opt/homebrew/bin
     /opt/homebrew/sbin
     /usr/local/bin

@@ -19,12 +19,6 @@
       "command": "npx",
       "args": ["@upstash/context7-mcp"],
       "env": {}
-    },
-    "youtube": {
-      "type": "stdio",
-      "command": "npx",
-      "args": ["@anaisbetts/mcp-youtube"],
-      "env": {}
     }
   }
 }

@@ -90,7 +90,7 @@ alias gp='git push'
 alias gpl='git pull'
 alias co='git checkout'
 alias brd='git branch | grep -v -e "main" -e "\*" | xargs git branch -d'
-alias fixcp="gac 'fix' && gp"
+alias gfixcp="gac 'fix' && gp"
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'

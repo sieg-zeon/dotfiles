@@ -32,7 +32,7 @@ brew "redis"
 brew "glab"
 brew "expo-orbit"
 brew "cocoapods"
-
+brew "peco"
 # Desktop Apps
 
 cask "visual-studio-code"

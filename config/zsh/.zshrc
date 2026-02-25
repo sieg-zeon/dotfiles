@@ -107,6 +107,8 @@ alias ccm='ccmanager'
 alias ccui="cd ~/projects/claudecodeui && npm run dev"
 alias tunnel-ccui="ccui & cloudflared tunnel run macbook.jion-claude-code-ui.work"
 alias ai-upd="bash ~/dotfiles/scripts/install/ai-tools.sh"
+source ~/dotfiles/scripts/utils/search_iam_policy.sh
+source ~/dotfiles/scripts/utils/peco.sh
 
 # 仕事用などで使うエイリアス
 if [ -f ~/dotfiles/alias.sh ]; then

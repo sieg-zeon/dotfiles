@@ -33,8 +33,8 @@ brew "glab"
 brew "expo-orbit"
 brew "cocoapods"
 brew "peco"
-# Desktop Apps
 
+# Desktop Apps
 cask "visual-studio-code"
 cask "google-chrome"
 cask "arc"
@@ -43,6 +43,7 @@ cask "docker"
 cask "postman"
 cask "slack"
 cask "discord"
+cask "rectangle"
 cask "clipy"
 cask "mysqlworkbench"
 cask "deepl"

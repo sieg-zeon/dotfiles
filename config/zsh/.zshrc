@@ -137,17 +137,11 @@ export EDITOR=vscode
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 # direnv
 eval "$(direnv hook zsh)"
-# mise
-eval "$(/opt/homebrew/bin/mise activate zsh)"
 # bun completions
 [ -s "/Users/jion_kozono/.bun/_bun" ] && source "/Users/jion_kozono/.bun/_bun"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-# Volta
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
-export VOLTA_FEATURE_PNPM=1
 # Java 17 (Android Gradle Plugin)
 export JAVA_HOME=/opt/homebrew/opt/openjdk@17
 
@@ -174,6 +168,9 @@ eval "$(gh completion -s zsh)"
 # tiup: https://docs.pingcap.com/ja/tidb/stable/tiup-overview#install-tiup
 export PATH=$HOME/.tiup/bin:$PATH
 # ↑ Remove the same path of the above line
+
+# mise（すべての PATH 設定より後に置くことで mise 管理のツールを優先）
+eval "$(/opt/homebrew/bin/mise activate zsh)"
 
 # Git管理外のローカル設定を読み込む（機密情報など）
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local

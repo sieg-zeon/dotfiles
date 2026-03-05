@@ -27,14 +27,6 @@ if [ -f "$DOTFILES_DIR/mise/_mise.sh" ]; then
     "$DOTFILES_DIR/mise/_mise.sh"
 fi
 
-# Volta
-if command -v volta >/dev/null 2>&1; then
-    echo "Setting up Volta..."
-    volta install node
-    volta install yarn
-    volta install pnpm
-fi
-
 # npm global packages
 if command -v npm >/dev/null 2>&1; then
     echo "Installing npm global packages..."

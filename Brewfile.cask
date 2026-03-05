@@ -1,0 +1,23 @@
+cask_args appdir: "/Applications"
+
+# Desktop Apps
+cask "visual-studio-code"
+cask "google-chrome"
+cask "arc"
+cask "iterm2"
+cask "docker"
+cask "postman"
+cask "slack"
+cask "discord"
+cask "rectangle"
+cask "clipy"
+cask "mysqlworkbench"
+cask "deepl"
+cask "android-studio"
+cask "localsend"
+cask "loom"
+
+# Mac App Store
+mas "Xcode", id: 497799835
+mas "LINE", id: 539883307
+mas "Kindle", id: 302584613

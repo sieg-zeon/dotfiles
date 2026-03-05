@@ -103,6 +103,11 @@ alias pud="pair_or_unpair_device"
 alias cc='claude'
 alias ccd='claude --dangerously-skip-permissions'
 alias dotfiles="code ~/dotfiles"
+# Homebrew helpers
+alias brew-sync="cd ~/dotfiles && brew bundle install --no-upgrade && cd -"
+bi() { brew install "$@" && echo "brew \"$1\"" >> ~/dotfiles/Brewfile; }
+bui() { brew uninstall "$@" && sed -i '' "/^brew \"$1\"/d" ~/dotfiles/Brewfile; }
+
 alias ccm='ccmanager'
 alias ccui="cd ~/projects/claudecodeui && npm run dev"
 alias tunnel-ccui="ccui & cloudflared tunnel run macbook.jion-claude-code-ui.work"

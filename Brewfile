@@ -1,5 +1,3 @@
-cask_args appdir: "/Applications"
-
 brew "openssl@3"
 brew "readline"
 brew "coreutils"
@@ -18,7 +16,7 @@ brew "awscli"
 brew "aws-sam-cli"
 brew "jq"
 brew "yq"
-brew "volta"
+brew "ni"
 # brew "mysql" # 9.x がインストールされてしまう
 brew "mysql@8.0" # パスを.zshrc で設定する必要がある
 brew "mise"
@@ -30,27 +28,5 @@ brew "supabase/tap/supabase"
 brew "libpq"
 brew "redis"
 brew "glab"
-brew "expo-orbit"
 brew "cocoapods"
 brew "peco"
-
-# Desktop Apps
-cask "visual-studio-code"
-cask "google-chrome"
-cask "arc"
-cask "iterm2"
-cask "docker"
-cask "postman"
-cask "slack"
-cask "discord"
-cask "rectangle"
-cask "clipy"
-cask "mysqlworkbench"
-cask "deepl"
-cask "android-studio"
-cask "localsend"
-cask "loom"
-
-mas "Xcode", id: 497799835
-mas "LINE", id: 539883307
-mas "Kindle", id: 302584613

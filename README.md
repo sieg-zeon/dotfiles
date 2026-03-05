@@ -108,7 +108,6 @@ git push origin main
 主要ツール:
 
 - Homebrew & 各種 CLI
-- Volta (Node.js 管理)
 - mise (多言語バージョン管理)
 - Docker Desktop
 - VS Code

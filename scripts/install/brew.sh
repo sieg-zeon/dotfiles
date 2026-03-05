@@ -30,6 +30,10 @@ fi
 echo "Installing packages from Brewfile..."
 brew bundle --file="$DOTFILES_DIR/Brewfile" --verbose
 
+# Install desktop apps from Brewfile.cask
+echo "Installing desktop apps from Brewfile.cask..."
+brew bundle --file="$DOTFILES_DIR/Brewfile.cask" --verbose
+
 # Cleanup
 echo "Cleaning up Homebrew..."
 brew cleanup --verbose

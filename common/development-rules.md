@@ -3,7 +3,7 @@
 ### Tech Stack
 
 - **Language**: TypeScript/JavaScript (Node.js)
-- **Package Manager**: pnpm, yarn, volta
+- **Package Manager**: pnpm, yarn (managed by mise)
 - **Database**: MySQL with Prisma, TiDB, AWS Aurora, Supabase
 - **Backend**: NestJS, GraphQL
 - **Frontend**: Next.js

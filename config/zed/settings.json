@@ -7,6 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "icon_theme": "Material Icon Theme",
   "session": {
     "trust_all_worktrees": true,
   },
@@ -31,8 +32,8 @@
   },
   "theme": {
     "mode": "system",
-    "light": "Gruvbox Light Hard",
-    "dark": "One Dark",
+    "light": "Ayu Light",
+    "dark": "Ayu Dark",
   },
   "languages": {
     "JavaScript": {
@@ -62,7 +63,9 @@
   },
   "format_on_save": "on",
   "tabs": {
-    "show_diagnostics": "errors",
+    "show_diagnostics": "all",
+    "file_icons": true,
+    "git_status": true,
   },
   "diagnostics": {
     "inline": {
@@ -71,5 +74,13 @@
   },
   "project_panel": {
     "show_diagnostics": "all",
+  },
+  "inlay_hints": {
+    "enabled": true,
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+    "show_other_hints": true,
+    "edit_debounce_ms": 700,
+    "scroll_debounce_ms": 50,
   },
 }

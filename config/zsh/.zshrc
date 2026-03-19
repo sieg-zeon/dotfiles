@@ -112,6 +112,7 @@ alias ccm='ccmanager'
 alias ccui="cd ~/projects/claudecodeui && npm run dev"
 alias tunnel-ccui="ccui & cloudflared tunnel run macbook.jion-claude-code-ui.work"
 alias ai-upd="bash ~/dotfiles/scripts/install/ai-tools.sh"
+alias zed-sync="sh ~/dotfiles/scripts/zed_extensions_sync.sh"
 source ~/dotfiles/scripts/utils/search_iam_policy.sh
 source ~/dotfiles/scripts/utils/peco.sh
 

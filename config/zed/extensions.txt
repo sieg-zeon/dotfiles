@@ -1,0 +1,9 @@
+cspell
+csv
+graphql
+html
+markdownlint
+material-icon-theme
+prisma
+rainbow-csv
+react-typescript-snippets

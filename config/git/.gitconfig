@@ -6,9 +6,8 @@
 	    log1 = log --oneline
 	    pl = pull
 	    ps = ps
-[user]
-	name = jion_kozono
-	email = zeon66190329@gmail.com
+[include]
+	path = ~/.gitconfig.local
 [init]
 	defaultBranch = main
 [credential]

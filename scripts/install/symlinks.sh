@@ -17,6 +17,17 @@ create_symlink "$DOTFILES_DIR/config/vim/.vimrc" ~/.vimrc ".vimrc"
 create_symlink "$DOTFILES_DIR/config/zsh/.zshrc" ~/.zshrc ".zshrc"
 create_symlink "$DOTFILES_DIR/mise/.tool-versions" ~/.tool-versions ".tool-versions"
 create_symlink "$DOTFILES_DIR/atcoder/.atcodertools.toml" ~/.atcodertools.toml ".atcodertools.toml"
+if [ ! -f ~/.gitconfig.local ]; then
+    default_name="jion_kozono"
+    default_email="zeon66190329@gmail.com"
+    echo "  Git ユーザー設定 (~/.gitconfig.local):"
+    echo "  デフォルト値を使う場合はそのままEnterを押してください"
+    printf "    user.name (default: $default_name): " && read git_name
+    printf "    user.email (default: $default_email): " && read git_email
+    git config --file ~/.gitconfig.local user.name "${git_name:-$default_name}"
+    git config --file ~/.gitconfig.local user.email "${git_email:-$default_email}"
+    echo "  ✅ ~/.gitconfig.local を作成しました"
+fi
 create_symlink "$DOTFILES_DIR/config/git/.gitconfig" ~/.gitconfig ".gitconfig"
 
 # Git ignore

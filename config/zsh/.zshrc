@@ -26,17 +26,6 @@ export LSCOLORS=cxfxcxdxbxegedabagacad
 
 export LANG=ja_JP.UTF-8 # 日本語を使用
 
-if type brew &>/dev/null; then
-    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-    source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-    source $(brew --prefix)/opt/zsh-git-prompt/zshrc.sh
-    source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-fi
-
-# check_update_dotfiles
-source ~/dotfiles/config/zsh/.zshrc.check_update_dotfiles
-
 # 環境変数
 typeset -U path PATH
 path=(
@@ -50,7 +39,18 @@ path=(
     /bin
     /sbin
     /Library/Apple/usr/bin
+    $path
 )
+
+if type brew &>/dev/null; then
+    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+    source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+    source $(brew --prefix)/opt/zsh-git-prompt/zshrc.sh
+    source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
+
+# check_update_dotfiles
+source ~/dotfiles/config/zsh/.zshrc.check_update_dotfiles
 
 # Git リポジトリ以外では $(git_super_status) を表示させたくない場合
 git_prompt() {

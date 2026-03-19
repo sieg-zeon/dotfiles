@@ -14,7 +14,7 @@
   },
   "worktreeHooks": {
     "post_creation": {
-      "command": "$HOME/.config/ccmanager/copy-untracked-files.sh \"$CCMANAGER_GIT_ROOT\" \"$CCMANAGER_WORKTREE_PATH\" && code \"$CCMANAGER_WORKTREE_PATH\" && cd \"$CCMANAGER_WORKTREE_PATH\" && ni",
+      "command": "$HOME/.config/ccmanager/copy-untracked-files.sh \"$CCMANAGER_GIT_ROOT\" \"$CCMANAGER_WORKTREE_PATH\" && zed \"$CCMANAGER_WORKTREE_PATH\" && cd \"$CCMANAGER_WORKTREE_PATH\" && ni",
       "enabled": true
     }
   },

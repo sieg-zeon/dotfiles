@@ -21,7 +21,7 @@ background-opacity = 0.90
 quick-terminal-position = "top"
 quick-terminal-screen = "main"
 quick-terminal-animation-duration = 0.3
-keybind = "global:cmd+shift+g=toggle_quick_terminal"
+keybind = "global:cmd+ctrl+g=toggle_quick_terminal"
 
 # Icon setting
 macos-icon = custom-style

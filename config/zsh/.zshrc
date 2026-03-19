@@ -102,7 +102,7 @@ alias pn="pnpm"
 alias pud="pair_or_unpair_device"
 alias cc='claude'
 alias ccd='claude --dangerously-skip-permissions'
-alias dotfiles="code ~/dotfiles"
+alias dotfiles="zed ~/dotfiles"
 # Homebrew helpers
 alias brew-sync="cd ~/dotfiles && brew bundle install --no-upgrade && cd -"
 bi() { brew install "$@" && echo "brew \"$1\"" >> ~/dotfiles/Brewfile; }
@@ -137,7 +137,7 @@ linux*)
 esac
 
 # エディタ
-export EDITOR=vscode
+export EDITOR=zed
 # postgres (libpq: クライアントツールのみ)
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 # direnv

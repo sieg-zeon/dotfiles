@@ -42,7 +42,7 @@ fi
 # gh CLI configuration
 if command -v gh >/dev/null 2>&1; then
     echo "Configuring GitHub CLI..."
-    gh config set editor "code --wait"
+    gh config set editor "zed --wait"
 fi
 
 echo "✓ Development tools setup completed"

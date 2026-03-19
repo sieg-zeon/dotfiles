@@ -78,4 +78,4 @@ if [ -f "$DOTFILES_DIR/.ccmanager/config.json" ]; then
 fi
 echo ""
 echo "✏️  To edit common rules:"
-echo "   code $DOTFILES_DIR/common/development-rules.md"
+echo "   zed $DOTFILES_DIR/common/development-rules.md"

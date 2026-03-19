@@ -30,6 +30,7 @@ create_symlink "$DOTFILES_DIR/config/ghostty/config" ~/.config/ghostty/config "g
 # Zed
 ensure_directory ~/.config/zed
 create_symlink "$DOTFILES_DIR/config/zed/settings.json" ~/.config/zed/settings.json "zed settings.json"
+create_symlink "$DOTFILES_DIR/config/zed/keymap.json" ~/.config/zed/keymap.json "zed keymap.json"
 
 # Note: AI tools configuration moved to ai-tools.sh
 

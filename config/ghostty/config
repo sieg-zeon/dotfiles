@@ -29,7 +29,7 @@ macos-icon-ghost-color = 010101
 macos-icon-screen-color = FF88FF
 
 # Contrast
-minimum-contrast = 1.3
+minimum-contrast = 3
 
 # TERM
 term = "xterm-256color"

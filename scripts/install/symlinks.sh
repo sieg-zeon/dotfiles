@@ -23,6 +23,10 @@ create_symlink "$DOTFILES_DIR/config/git/.gitconfig" ~/.gitconfig ".gitconfig"
 ensure_directory ~/.config/git
 create_symlink "$DOTFILES_DIR/config/git/ignore" ~/.config/git/ignore "git ignore"
 
+# Ghostty
+ensure_directory ~/.config/ghostty
+create_symlink "$DOTFILES_DIR/config/ghostty/config" ~/.config/ghostty/config "ghostty config"
+
 # Note: AI tools configuration moved to ai-tools.sh
 
 # Utilities

@@ -8,17 +8,57 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "session": {
-    "trust_all_worktrees": true
+    "trust_all_worktrees": true,
   },
   "file_types": {
-    "sql": ["*.sql"]
+    "sql": ["*.sql"],
   },
   "base_keymap": "VSCode",
+  "auto_update": true,
   "ui_font_size": 16,
-  "buffer_font_size": 15,
+  "ui_font_family": ".ZedMono",
+  "ui_font_weight": 450,
+  "buffer_font_size": 16,
+  "buffer_font_family": ".ZedMono",
+  "buffer_font_features": {
+    "calt": true,
+    "liga": true,
+    "ss02": true,
+    "ss03": true,
+    "ss04": true,
+    "ss05": true,
+    "zero": true,
+  },
   "theme": {
     "mode": "system",
-    "light": "Gruvbox Light Soft",
-    "dark": "One Dark"
-  }
+    "light": "Gruvbox Light Hard",
+    "dark": "One Dark",
+  },
+  "languages": {
+    "JavaScript": {
+      "formatter": {
+        "external": {
+          "command": "node_modules/.bin/prettier",
+          "arguments": ["--stdin-filepath", "{buffer_path}"],
+        },
+      },
+    },
+    "TypeScript": {
+      "formatter": {
+        "external": {
+          "command": "node_modules/.bin/prettier",
+          "arguments": ["--stdin-filepath", "{buffer_path}"],
+        },
+      },
+    },
+    "TSX": {
+      "formatter": {
+        "external": {
+          "command": "node_modules/.bin/prettier",
+          "arguments": ["--stdin-filepath", "{buffer_path}"],
+        },
+      },
+    },
+  },
+  "format_on_save": "on",
 }

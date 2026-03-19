@@ -27,6 +27,10 @@ create_symlink "$DOTFILES_DIR/config/git/ignore" ~/.config/git/ignore "git ignor
 ensure_directory ~/.config/ghostty
 create_symlink "$DOTFILES_DIR/config/ghostty/config" ~/.config/ghostty/config "ghostty config"
 
+# Zed
+ensure_directory ~/.config/zed
+create_symlink "$DOTFILES_DIR/config/zed/settings.json" ~/.config/zed/settings.json "zed settings.json"
+
 # Note: AI tools configuration moved to ai-tools.sh
 
 # Utilities

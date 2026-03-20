@@ -16,6 +16,8 @@ window-padding-y = 5
 window-theme = "ghostty"
 background-blur-radius = 20
 background-opacity = 0.90
+adjust-cell-width = -1
+adjust-cell-height = 2
 
 # Quick Terminal Settings
 quick-terminal-position = "top"
@@ -23,10 +25,19 @@ quick-terminal-screen = "main"
 quick-terminal-animation-duration = 0.3
 keybind = "global:cmd+ctrl+g=toggle_quick_terminal"
 
-# Icon setting
+# Icon Settings
 macos-icon = custom-style
 macos-icon-ghost-color = 010101
 macos-icon-screen-color = FF88FF
+
+# Cursor Settings
+cursor-style = block
+cursor-style-blink = false
+cursor-invert-fg-bg = true
+cursor-opacity = 0.8
+
+# Shell
+shell-integration-features = no-cursor
 
 # Contrast
 minimum-contrast = 3

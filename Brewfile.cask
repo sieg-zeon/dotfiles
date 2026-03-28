@@ -2,12 +2,11 @@ cask_args appdir: "/Applications"
 
 # Desktop Apps
 cask "visual-studio-code"
-cask "google-chrome"
-cask "arc"
+cask "thebrowsercompany-dia" # as default browser
+cask "google-chrome" # for debugging
 cask "ghostty"
 cask "zed"
 cask "docker"
-cask "postman"
 cask "slack"
 cask "discord"
 cask "rectangle"

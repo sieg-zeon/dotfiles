@@ -180,3 +180,6 @@ eval "$(/opt/homebrew/bin/mise activate zsh)"
 
 # Git管理外のローカル設定を読み込む（機密情報など）
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
+
+# Vite+ bin (https://viteplus.dev)
+. "$HOME/.vite-plus/env"

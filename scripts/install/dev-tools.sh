@@ -27,16 +27,23 @@ if [ -f "$DOTFILES_DIR/mise/_mise.sh" ]; then
     "$DOTFILES_DIR/mise/_mise.sh"
 fi
 
-# TiUP (TiDB)
-if ! command -v tiup >/dev/null 2>&1; then
-    echo "Installing TiUP..."
-    curl --proto '=https' --tlsv1.2 -sSf https://tiup-mirrors.pingcap.com/install.sh | sh
+# npm global packages
+# TODO: Vite Plus (vp) が安定したら ni を削除する（vp が上位互換のため）
+if command -v npm >/dev/null 2>&1; then
+    echo "Installing npm global packages..."
+    npm i -g @antfu/ni
 fi
 
 # Vite Plus (https://viteplus.dev)
 if ! command -v vite-plus >/dev/null 2>&1; then
     echo "Installing Vite Plus..."
     curl -fsSL https://vite.plus | bash
+fi
+
+# TiUP (TiDB)
+if ! command -v tiup >/dev/null 2>&1; then
+    echo "Installing TiUP..."
+    curl --proto '=https' --tlsv1.2 -sSf https://tiup-mirrors.pingcap.com/install.sh | sh
 fi
 
 # gh CLI configuration

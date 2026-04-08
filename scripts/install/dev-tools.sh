@@ -46,6 +46,14 @@ if ! command -v tiup >/dev/null 2>&1; then
     curl --proto '=https' --tlsv1.2 -sSf https://tiup-mirrors.pingcap.com/install.sh | sh
 fi
 
+# git-secrets
+if command -v git-secrets >/dev/null 2>&1; then
+    echo "Configuring git-secrets..."
+    git secrets --install ~/.git-templates/git-secrets
+    git config --global init.templateDir ~/.git-templates/git-secrets
+    git secrets --register-aws --global
+fi
+
 # gh CLI configuration
 if command -v gh >/dev/null 2>&1; then
     echo "Configuring GitHub CLI..."

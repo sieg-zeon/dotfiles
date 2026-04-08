@@ -14,6 +14,7 @@ brew "zsh-git-prompt"
 brew "zsh-syntax-highlighting"
 brew "awscli"
 brew "aws-sam-cli"
+brew "git-secrets"
 brew "jq"
 brew "yq"
 # brew "mysql" # 9.x がインストールされてしまう

@@ -9,46 +9,19 @@
   "files.trimFinalNewlines": true,
   "files.insertFinalNewline": true,
   "search.exclude": {
-    "@generated/*": true
+    "@generated/*": true,
   },
   "typescript.preferences.importModuleSpecifier": "relative",
   "[sql]": {
-    "editor.defaultFormatter": "adpyke.vscode-sql-formatter"
+    "editor.defaultFormatter": "adpyke.vscode-sql-formatter",
   },
   "[shellscript]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
+    "editor.defaultFormatter": "foxundermoon.shell-format",
   },
   "[ignore]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
+    "editor.defaultFormatter": "foxundermoon.shell-format",
   },
   "[dotenv]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
+    "editor.defaultFormatter": "foxundermoon.shell-format",
   },
-  // lint
-  "markdownlint.config": {
-    // NOTE: へッダーのレベルは1つずつ順番に増加しなくてもよい
-    "MD013": false,
-    // commands-show-output: Dollar signs used before commands without showing output
-    "MD014": false,
-    // ol-prefix: Ordered list item prefix
-    "MD029": false,
-    // NOTE: インラインHTMLの制限を解除
-    "MD033": false,
-    // NOTE: 見出しの代わりに強調を使っても良い
-    "MD036": false,
-    // NOTE: First line in a file should be a top-level heading
-    "MD041": false,
-    // NOTE: no-empty-links: No empty links
-    "MD042": false
-  },
-  "cSpell.words": [
-    "atcoder",
-    "atcodertools",
-    "blueutil",
-    "ccmanager",
-    "claudecodeui",
-    "glab",
-    "Trackpad",
-    "unpair"
-  ]
 }

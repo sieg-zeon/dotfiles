@@ -47,5 +47,13 @@
       }
     ]
   },
-  "skipDangerousModePermissionPrompt": true
+  "skipDangerousModePermissionPrompt": true,
+  "extraKnownMarketplaces": {
+    "ai-shared-assets": {
+      "source": {
+        "source": "git",
+        "url": "https://gitlab.com/mates-pay/app/ai-shared-assets.git"
+      }
+    }
+  }
 }

@@ -1,5 +1,4 @@
 {
-  "model": "opusplan",
   "permissions": {
     "allow": [
       "Bash(npm:*)",
@@ -24,6 +23,7 @@
       "Bash(nc:*)"
     ]
   },
+  "model": "opusplan",
   "hooks": {
     "Notification": [
       {
@@ -48,7 +48,6 @@
       }
     ]
   },
-  "skipDangerousModePermissionPrompt": true,
   "extraKnownMarketplaces": {
     "ai-shared-assets": {
       "source": {
@@ -56,5 +55,6 @@
         "url": "https://gitlab.com/mates-pay/app/ai-shared-assets.git"
       }
     }
-  }
+  },
+  "skipDangerousModePermissionPrompt": true
 }

@@ -18,6 +18,10 @@
 - **CI/CD**: GitHub Actions, GitLab CI
 - **IDE**: VS Code
 - **Terminal**: Zsh with custom dotfiles
+- **Git Worktree Management**: `ccmanager`
+  - git worktree 作成時は `git worktree add` ではなく `ccmanager` を必ず使用する
+  - ccmanager は依存関係インストール（`pnpm install` 等）も自動で行うため自然な手順になる
+  - ccmanager は TUI ツールのため、Claude Code から対話実行は不可。worktree 作成が必要な場合はユーザーに ccmanager 実行を依頼する
 
 ## Project Standards
 

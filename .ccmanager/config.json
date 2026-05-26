@@ -40,13 +40,6 @@
         "command": "claude",
         "args": ["--resume", "--dangerously-skip-permissions"],
         "fallbackArgs": ["--dangerously-skip-permissions"]
-      },
-      {
-        "id": "gemini-default",
-        "name": "Gemini CLI",
-        "command": "gemini",
-        "args": [],
-        "detectionStrategy": "gemini"
       }
     ],
     "defaultPresetId": "claude-resume",

@@ -24,16 +24,12 @@ else
     curl -fsSL https://claude.ai/install.sh | bash && echo "  ✅ Claude Code installed" || echo "  ⚠️  Claude Code installation failed"
 fi
 
-# Gemini CLI
-install_npm_package "@google/gemini-cli" "gemini" "Gemini CLI"
-
 # ccmanager
 install_npm_package "ccmanager" "ccmanager" "ccmanager"
 
 # AI tools configuration
 echo "Setting up AI tools configuration..."
 setup_ai_tool "claude"
-setup_ai_tool "gemini"
 
 # Claude Code MCP servers (global)
 # 環境変数はシェルから継承されるため、envに直接値を保存しない
@@ -69,9 +65,7 @@ echo ""
 echo "--- AI Tools Setup Completed ---"
 echo "🔗 Symbolic links:"
 echo "   ~/.claude/CLAUDE.md → ~/dotfiles/common/development-rules.md"
-echo "   ~/.gemini/GEMINI.md → ~/dotfiles/common/development-rules.md"
 echo "   ~/.claude/settings.json → ~/dotfiles/.claude/settings.json"
-echo "   ~/.gemini/settings.json → ~/dotfiles/.gemini/settings.json"
 echo "   ~/.config/ccmanager/config.json → ~/dotfiles/.ccmanager/config.json"
 if [ -f "$DOTFILES_DIR/.ccmanager/config.json" ]; then
     echo "   ✅ ccmanager config file path: $DOTFILES_DIR/.ccmanager/config.json"

@@ -14,7 +14,7 @@
 2. **シンボリックリンク方式の変更**
 
    - AI ツール設定が共通ファイル`common/development-rules.md`を直接参照
-   - dotfiles 内の`.claude/CLAUDE.md`、`.gemini/GEMINI.md`は削除
+   - dotfiles 内の`.claude/CLAUDE.md`は削除
 
 3. **スクリプトの分割**
 
@@ -39,7 +39,7 @@ git pull origin main
 ```bash
 # 重要なファイルのバックアップ
 mkdir -p ~/dotfiles-backup-$(date +%Y%m%d)
-cp -r ~/.claude ~/.gemini ~/dotfiles-backup-$(date +%Y%m%d)/
+cp -r ~/.claude ~/dotfiles-backup-$(date +%Y%m%d)/
 cp ~/.zshrc ~/.gitconfig ~/.vimrc ~/dotfiles-backup-$(date +%Y%m%d)/
 ```
 
@@ -58,7 +58,7 @@ bash scripts/install/setup.sh
 ls -la ~/.zshrc ~/.gitconfig ~/.vimrc
 
 # シンボリックリンクの確認
-ls -la ~/.claude/CLAUDE.md ~/.gemini/GEMINI.md
+ls -la ~/.claude/CLAUDE.md
 
 # Zsh設定の読み込み
 source ~/.zshrc
@@ -103,9 +103,8 @@ ls -la ~/.claude/CLAUDE.md
 # 出力例: ~/.claude/CLAUDE.md -> /Users/username/dotfiles/common/development-rules.md
 
 # リンクが壊れている場合
-rm ~/.claude/CLAUDE.md ~/.gemini/GEMINI.md
+rm ~/.claude/CLAUDE.md
 ln -sf ~/dotfiles/common/development-rules.md ~/.claude/CLAUDE.md
-ln -sf ~/dotfiles/common/development-rules.md ~/.gemini/GEMINI.md
 ```
 
 ### 📝 変更の詳細
@@ -124,7 +123,6 @@ ln -sf ~/dotfiles/common/development-rules.md ~/.gemini/GEMINI.md
 #### 削除されたファイル
 
 - `.claude/CLAUDE.md` (シンボリックリンク)
-- `.gemini/GEMINI.md` (シンボリックリンク)
 - 空のディレクトリ: `zsh/`, `git/`, `vim/`
 
 ### ✅ 移行完了の確認
@@ -152,7 +150,6 @@ ls ~/dotfiles/scripts/install/
 # バックアップから復元
 cp ~/dotfiles-backup-*/.*rc ~/ 2>/dev/null || true
 cp -r ~/dotfiles-backup-*/.claude ~/.claude 2>/dev/null || true
-cp -r ~/dotfiles-backup-*/.gemini ~/.gemini 2>/dev/null || true
 ```
 
 ### 📞 サポート

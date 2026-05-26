@@ -61,7 +61,7 @@ install_npm_package() {
 
 # Setup AI tool configuration
 setup_ai_tool() {
-    local tool_name="$1"  # claude or gemini
+    local tool_name="$1"  # e.g. claude
     local tool_dir_var="${2:-$(echo $tool_name | tr '[:lower:]' '[:upper:]')_DIR}"
     local tool_dir="${!tool_dir_var:-$DOTFILES_DIR/.$tool_name}"
 

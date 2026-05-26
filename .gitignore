@@ -3,7 +3,6 @@
 !/common/
 !/config/
 !/.claude/
-!/.gemini/
 !/.ccmanager/
 !/Brewfile
 !/Brewfile.lock.json

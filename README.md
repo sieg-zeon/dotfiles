@@ -19,8 +19,6 @@ dotfiles/
 │       └── .vimrc
 ├── .claude/                   # Claude Code設定
 │   └── settings.json
-├── .gemini/                   # Gemini CLI設定
-│   └── settings.json
 ├── .ccmanager/                # ccmanager設定
 │   └── config.json
 ├── scripts/                   # 各種スクリプト
@@ -80,10 +78,9 @@ bash ~/dotfiles/scripts/install/ai-tools.sh
 ### AI 開発ツール統合
 
 - **Claude Code**: Anthropic 公式 CLI ツール
-- **Gemini CLI**: Google Gemini CLI ツール
 - **ccmanager**: Claude Code Manager
 - **claudecodeui**: Claude Code UI (Web interface)
-- **共通ルール管理**: `common/development-rules.md`を全 AI ツールで共有
+- **共通ルール管理**: `common/development-rules.md`を AI ツールで共有
 
 ### 自動チェック機能
 

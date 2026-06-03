@@ -56,6 +56,5 @@
     }
   },
   "skipDangerousModePermissionPrompt": true,
-  "theme": "light",
-  "model": "opusplan"
+  "theme": "light"
 }

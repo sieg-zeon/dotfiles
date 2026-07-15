@@ -8,7 +8,7 @@
       "Bash(nr test)",
       "Read(./.env)",
       "Read(./src/*)",
-      "Write(./src/*)",
+      "Edit(./src/*)",
       "Edit(./docs/*)"
     ],
     "deny": [
@@ -18,7 +18,7 @@
       "Bash(git rebase:*)",
       "Read(id_rsa)",
       "Read(id_ed25519)",
-      "Write(**/secrets/**)",
+      "Edit(**/secrets/**)",
       "Bash(wget:*)",
       "Bash(nc:*)"
     ]

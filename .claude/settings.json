@@ -23,7 +23,6 @@
       "Bash(nc:*)"
     ]
   },
-  "model": "claude-fable-5[1m]",
   "hooks": {
     "Notification": [
       {
@@ -47,6 +46,9 @@
         ]
       }
     ]
+  },
+  "enabledPlugins": {
+    "aws-guard@ai-shared-assets": true
   },
   "extraKnownMarketplaces": {
     "ai-shared-assets": {

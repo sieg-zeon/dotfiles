@@ -16,6 +16,7 @@ cask "deepl"
 cask "android-studio"
 cask "localsend"
 cask "loom"
+cask "obsidian"
 
 # Mac App Store
 mas "Xcode", id: 497799835

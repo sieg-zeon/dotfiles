@@ -8,6 +8,10 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "cli_default_open_behavior": "existing_window",
+  // Vite+ (vp lint / vp fmt) を使うリポジトリ向け。プロジェクト設定では指定できないためここに置く
+  "auto_install_extensions": {
+    "oxc": true,
+  },
   "git_panel": {
     "dock": "left",
   },

@@ -18,10 +18,16 @@
 - **CI/CD**: GitHub Actions, GitLab CI
 - **IDE**: VS Code
 - **Terminal**: Zsh with custom dotfiles
-- **Git Worktree Management**: `ccmanager`
-  - git worktree 作成時は `git worktree add` ではなく `ccmanager` を必ず使用する
-  - ccmanager は依存関係インストール（`pnpm install` 等）も自動で行うため自然な手順になる
-  - ccmanager は TUI ツールのため、Claude Code から対話実行は不可。worktree 作成が必要な場合はユーザーに ccmanager 実行を依頼する
+- **Git Worktree Management**: Claude Code 標準の EnterWorktree ツールを使う（ccmanager は使わない。ユーザーへの作成依頼も不要）
+  - 派生元は issue の `branch::` ラベル（対応表: staging / release / pre-main、ラベルなしは main）に従う
+  - EnterWorktree は既定で `origin/<default branch>` から切るため、派生元を選ぶにはプロジェクトの `.claude/settings.local.json`（gitignore 対象）に `"worktree": { "baseRef": "head" }` を入れ、メイン checkout を派生元ブランチに切り替えて `git pull --ff-only` してから `EnterWorktree({ name })` を呼ぶ
+  - 作成後のセットアップは worktree 内で次を行う
+    1. ブランチ名は `worktree-<name>` になるので `git branch -m worktree-<name> <name>` で規約名（`<issue番号>-<prefix>-<short-name>`）に改名する
+    2. `pnpm install --frozen-lockfile`
+    3. gitignore 対象ファイルをメイン checkout からコピーする: `.env`、`docs/ai-output/plan/<issue番号>-*.md`（計画書。`mkdir -p docs/ai-output/plan docs/ai-output/review` してから）
+    4. `pnpm prisma:generate`（`prisma/client/` は gitignore 対象で worktree には無い）
+  - worktree 内の Bash は隔離チェックが厳しく、`git -C` や `cd` でメイン側を触る操作に加え、コマンド文字列に「git」を含むだけの heredoc / printf も拒否される。ファイル編集は Edit / Write ツールを使い、メイン側の設定ファイルを読むだけなら絶対パスで参照してよい
+  - 終了は ExitWorktree。`EnterWorktree({ path })` で入った既存 worktree は `remove` できないため、その場合は `keep` で抜けてからメイン checkout で `git worktree remove` する
 
 ## Project Standards
 

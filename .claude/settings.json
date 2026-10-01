@@ -48,7 +48,8 @@
     ]
   },
   "enabledPlugins": {
-    "aws-guard@ai-shared-assets": true
+    "aws-guard@ai-shared-assets": true,
+    "biz-ops-tools@ai-shared-assets": true
   },
   "extraKnownMarketplaces": {
     "ai-shared-assets": {
@@ -61,6 +62,6 @@
   "tui": "fullscreen",
   "skipDangerousModePermissionPrompt": true,
   "theme": "light",
-  "agentPushNotifEnabled": true,
-  "switchModelsOnFlag": true
+  "switchModelsOnFlag": true,
+  "agentPushNotifEnabled": true
 }

@@ -4,6 +4,7 @@
       "Bash(npm:*)",
       "Bash(yarn:*)",
       "Bash(git:*)",
+      "Bash(cp:*)",
       "Bash(nr lint)",
       "Bash(nr test)",
       "Read(./.env)",

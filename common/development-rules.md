@@ -24,8 +24,10 @@
   - 作成後のセットアップは worktree 内で次を行う
     1. ブランチ名は `worktree-<name>` になるので `git branch -m worktree-<name> <name>` で規約名（`<issue番号>-<prefix>-<short-name>`）に改名する
     2. `pnpm install --frozen-lockfile`
-    3. gitignore 対象ファイルをメイン checkout からコピーする: `.env`、`docs/ai-output/plan/<issue番号>-*.md`（計画書。`mkdir -p docs/ai-output/plan docs/ai-output/review` してから）
-    4. `pnpm prisma:generate`（`prisma/client/` は gitignore 対象で worktree には無い）
+    3. gitignore 対象で worktree に存在しないファイルをメイン checkout からコピーする。**対象は PJ の構成ごとに違うため決め打ちにせず、`.gitignore` とメイン checkout 側の実ファイル（絶対パスで `ls`。worktree 内から `git -C` は使えない）を突き合わせて特定する**
+       - 環境変数・秘密情報: 配置が PJ ごとに異なる（ルートの `.env`、`env/.env.*`、`env/secrets/.env.secrets.*`、`*.pem` 等）。ローカル起動・`cdk diff`・動作確認に必要なものを漏れなく揃える
+       - AI 成果物: `docs/ai-output/plan/<issue番号>-*.md`（計画書。`mkdir -p docs/ai-output/plan docs/ai-output/review` してから）
+    4. gitignore 対象の生成物があれば生成コマンドを実行する。`package.json` の scripts を見て判断する（e.g. Prisma PJ は `pnpm prisma:generate` で `prisma/client/` を生成。生成物がコミット済みの PJ では不要）
   - worktree 内の Bash は隔離チェックが厳しく、`git -C` や `cd` でメイン側を触る操作に加え、コマンド文字列に「git」を含むだけの heredoc / printf も拒否される。ファイル編集は Edit / Write ツールを使い、メイン側の設定ファイルを読むだけなら絶対パスで参照してよい
   - 終了は ExitWorktree。`EnterWorktree({ path })` で入った既存 worktree は `remove` できないため、その場合は `keep` で抜けてからメイン checkout で `git worktree remove` する
 

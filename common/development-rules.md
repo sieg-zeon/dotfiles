@@ -24,10 +24,8 @@
   - 作成後のセットアップは worktree 内で次を行う
     1. ブランチ名は `worktree-<name>` になるので `git branch -m worktree-<name> <name>` で規約名（`<issue番号>-<prefix>-<short-name>`）に改名する
     2. `pnpm install --frozen-lockfile`
-    3. gitignore 対象で worktree に存在しないファイルをメイン checkout からコピーする。**対象は PJ の構成ごとに違うため決め打ちにせず、`.gitignore` とメイン checkout 側の実ファイル（絶対パスで `ls`。worktree 内から `git -C` は使えない）を突き合わせて特定する**
-       - 環境変数・秘密情報: 配置が PJ ごとに異なる（ルートの `.env`、`env/.env.*`、`env/secrets/.env.secrets.*`、`*.pem` 等）。ローカル起動・`cdk diff`・動作確認に必要なものを漏れなく揃える
-       - AI 成果物: `docs/ai-output/plan/<issue番号>-*.md`（計画書。`mkdir -p docs/ai-output/plan docs/ai-output/review` してから）
-    4. gitignore 対象の生成物があれば生成コマンドを実行する。`package.json` の scripts を見て判断する（e.g. Prisma PJ は `pnpm prisma:generate` で `prisma/client/` を生成。生成物がコミット済みの PJ では不要）
+    3. gitignore 対象ファイルをメイン checkout からコピーする: `.env`、`docs/ai-output/plan/<issue番号>-*.md`（計画書。`mkdir -p docs/ai-output/plan docs/ai-output/review` してから）
+    4. `pnpm prisma:generate`（`prisma/client/` は gitignore 対象で worktree には無い）
   - worktree 内の Bash は隔離チェックが厳しく、`git -C` や `cd` でメイン側を触る操作に加え、コマンド文字列に「git」を含むだけの heredoc / printf も拒否される。ファイル編集は Edit / Write ツールを使い、メイン側の設定ファイルを読むだけなら絶対パスで参照してよい
   - 終了は ExitWorktree。`EnterWorktree({ path })` で入った既存 worktree は `remove` できないため、その場合は `keep` で抜けてからメイン checkout で `git worktree remove` する
 
@@ -73,6 +71,26 @@
 - **Comments**: Japanese (following international standards)
 - **Test Cases**: Japanese (following international standards)
 - **Variable/Function Names**: English
+
+### Issue / MR コメント
+
+人に判断を依頼するコメントは、読み手が読んで判断できることを最優先にする。下書きしたら投稿前に全体を通読し、以下を満たしているか確認する。
+
+- **結論を先頭に置く**。何を判断してほしいのかを冒頭で明示する
+- **短くする**。判断に不要な経緯・補足・余談は削る。文章量そのものがコミュニケーションコストになる
+- **識別子は略さずフルネームで書く**（`stu_corr` ではなく `stu_corr_scoringdate_idx`）
+- **読み手と共有できているか不明な用語を使わない**。「covering」のような一般語で指さず、具体名（どの index か）で書く
+- **数値には前提と出所を添える**
+  - どのクエリを・どの条件で・どの環境で測ったか。実ワークロードに沿った条件か
+  - 比率は分母の定義を書く（「93/300」なら 300 が何の母数か）
+  - 似た指標を並べない。並べるなら違いを説明する
+  - 計測結果は読み取り行数だけでなく返却行数も載せる
+- **因果関係を安易に結ばない**。「A なので B」と書く前に A が B の原因か確認する。推測は推測と明示するか、書かない
+- **本文の説明と表・図の内容が対応しているか確認する**
+- **AI 特有の言い回しを避ける**
+  - 比喩（「1つ後ろの列車」「covering を手放す」「index を引く」）
+  - 曖昧な動詞（「落とせる」「寄せる」）
+  - 技術的に不正確な言い換え（PK ルックアップを「行取得」と呼ぶなど）
 
 ### Task Management
 

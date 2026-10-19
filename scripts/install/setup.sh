@@ -21,7 +21,10 @@ source "$SCRIPT_DIR/dev-tools.sh"
 # 4. AI tools
 source "$SCRIPT_DIR/ai-tools.sh"
 
-# 5. Secrets (機密情報)
+# 5. Raycast extensions（Node.js が必要なので dev-tools の後）
+source "$SCRIPT_DIR/raycast.sh"
+
+# 6. Secrets (機密情報)
 source "$SCRIPT_DIR/secrets.sh"
 
 echo "=== All setup completed successfully! ==="

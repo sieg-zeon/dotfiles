@@ -28,7 +28,8 @@ dotfiles/
 │   │   ├── brew.sh           # Homebrew管理
 │   │   ├── symlinks.sh       # シンボリックリンク作成
 │   │   ├── dev-tools.sh      # 開発ツール
-│   │   └── ai-tools.sh       # AIツール＆設定更新
+│   │   ├── ai-tools.sh       # AIツール＆設定更新
+│   │   └── raycast.sh        # 自作 Raycast 拡張の取り込み
 │   └── utils/                # ユーティリティ
 │       └── pair_or_unpair_device.sh
 ├── mise/                      # mise設定
@@ -71,6 +72,9 @@ bash ~/dotfiles/scripts/install/dev-tools.sh
 
 # AIツール＆設定更新
 bash ~/dotfiles/scripts/install/ai-tools.sh
+
+# 自作 Raycast 拡張の取り込み
+bash ~/dotfiles/scripts/install/raycast.sh
 ```
 
 ## ✨ 機能
@@ -124,7 +128,7 @@ git push origin main
 
 - 探索対象は Orca 登録済みリポジトリと `~/projects` `~/orca/projects` `~/dotfiles`（`ORCA_OPEN_ROOTS` で変更可）。未登録なら自動で `orca repo add` する
 - Raycast 拡張（`raycast/orca-open`）でリポジトリ一覧を絞り込んで開ける。よく開くものほど上に並ぶ
-  - インストール: `cd ~/dotfiles/raycast/orca-open && npm install && npm run dev`（取り込まれたら Ctrl+C で止めてよい）
+  - インストール: `setup.sh` で自動的に取り込まれる。単体では `bash ~/dotfiles/scripts/install/raycast.sh`
   - Raycast の Settings → Extensions で「Open in Orca」にホットキーを割り当てる
   - Enter で端末、Action Panel（`⌘K`）から Claude / Codex 起動を選べる
 

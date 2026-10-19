@@ -112,6 +112,39 @@ git push origin main
 
 詳細は[Brewfile](./Brewfile)を参照。
 
+### Orca 連携
+
+#### リポジトリ名で Orca を開く（Raycast）
+
+```bash
+# 単体でも使える。名前は 完全一致 → 前方一致 → 部分一致 の順で解決
+~/dotfiles/scripts/orca/open.sh utanote          # 端末を開く（既存タブがあれば切り替え）
+~/dotfiles/scripts/orca/open.sh utanote claude   # 新規なら Claude Code を起動
+```
+
+- 探索対象は Orca 登録済みリポジトリと `~/projects` `~/orca/projects` `~/dotfiles`（`ORCA_OPEN_ROOTS` で変更可）。未登録なら自動で `orca repo add` する
+- Raycast 拡張（`raycast/orca-open`）でリポジトリ一覧を絞り込んで開ける。よく開くものほど上に並ぶ
+  - インストール: `cd ~/dotfiles/raycast/orca-open && npm install && npm run dev`（取り込まれたら Ctrl+C で止めてよい）
+  - Raycast の Settings → Extensions で「Open in Orca」にホットキーを割り当てる
+  - Enter で端末、Action Panel（`⌘K`）から Claude / Codex 起動を選べる
+
+#### Raycast 設定の同期
+
+Raycast の設定は暗号化 DB に保存されるため、Raycast の Export / Import で `config/raycast/` の `.rayconfig` を同期する。公開リポジトリなので **必ずパスワード付きで書き出す**。
+
+- 書き出し: Settings → Advanced → Export で `config/raycast/` に保存する。ファイル名は既定の `Raycast <日時>.rayconfig` のまま残し、古いものも履歴として消さない
+- 読み込み: 上記の Raycast 拡張を先に入れてから、Settings → Advanced → Import で最新の `.rayconfig` を選ぶ（拡張に割り当てたホットキーも復元するため）
+
+#### Orca 設定の同期
+
+Orca の設定は SQLite 内に保存されるため、`config/orca/settings.json` と export / import で同期する。アカウント・パスなどマシン固有の項目は除外される。
+
+```bash
+bash ~/dotfiles/scripts/orca/settings.sh export   # 現在の設定を dotfiles に書き出す
+bash ~/dotfiles/scripts/orca/settings.sh diff     # 差分確認
+bash ~/dotfiles/scripts/orca/settings.sh import   # dotfiles の設定を反映（Orca 終了中のみ。DB をバックアップしてから更新）
+```
+
 ## 🔧 カスタマイズ
 
 ### AI 開発ルールの編集

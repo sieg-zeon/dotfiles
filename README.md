@@ -134,10 +134,10 @@ git push origin main
 
 #### Raycast 設定の同期
 
-Raycast の設定は暗号化 DB に保存されるため、Raycast の Export / Import で `config/raycast/` の `.rayconfig` を同期する。公開リポジトリなので **必ずパスワード付きで書き出す**。
+Raycast の設定は Raycast の Cloud Sync で同期する（正本）。
 
-- 書き出し: Settings → Advanced → Export で `config/raycast/` に保存する。ファイル名は既定の `Raycast <日時>.rayconfig` のまま残し、古いものも履歴として消さない
-- 読み込み: 上記の Raycast 拡張を先に入れてから、Settings → Advanced → Import で最新の `.rayconfig` を選ぶ（拡張に割り当てたホットキーも復元するため）
+- 別マシン: 上記の Raycast 拡張を先に取り込んでから Raycast にログインし、Cloud Sync を有効にする（拡張に割り当てたホットキーも復元するため）
+- バックアップ: Raycast v2 の Scheduled Backup（毎週）で `config/raycast/` に `.rayconfig` が保存される。git 管理外（`.gitignore`）なのでローカルにのみ残る
 
 #### Orca 設定の同期
 

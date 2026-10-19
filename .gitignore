@@ -21,3 +21,6 @@ alias.sh
 # Backup and work directories
 /backup/
 /refactoring-tasks/
+
+# Raycast の定期バックアップ（Cloud Sync が正本）
+/config/raycast/

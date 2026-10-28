@@ -76,6 +76,14 @@ setup_ai_tool() {
         "$HOME/.$tool_name/settings.json" \
         "$tool_name settings.json"
 
+    # Link hooks directory (settings.json の hooks から呼ぶスクリプト)
+    if [ -d "$tool_dir/hooks" ]; then
+        create_symlink \
+            "$tool_dir/hooks" \
+            "$HOME/.$tool_name/hooks" \
+            "$tool_name hooks/"
+    fi
+
     # Link to common development rules
     local md_file="$(echo $tool_name | tr '[:lower:]' '[:upper:]').md"
     create_symlink \

@@ -18,6 +18,7 @@ dotfiles/
 │   └── vim/                   # Vim設定
 │       └── .vimrc
 ├── .claude/                   # Claude Code設定
+│   ├── hooks/                 # settings.json の hooks から呼ぶスクリプト
 │   └── settings.json
 ├── .ccmanager/                # ccmanager設定
 │   └── config.json

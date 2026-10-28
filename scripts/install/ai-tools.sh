@@ -66,6 +66,7 @@ echo "--- AI Tools Setup Completed ---"
 echo "🔗 Symbolic links:"
 echo "   ~/.claude/CLAUDE.md → ~/dotfiles/common/development-rules.md"
 echo "   ~/.claude/settings.json → ~/dotfiles/.claude/settings.json"
+echo "   ~/.claude/hooks → ~/dotfiles/.claude/hooks"
 echo "   ~/.config/ccmanager/config.json → ~/dotfiles/.ccmanager/config.json"
 if [ -f "$DOTFILES_DIR/.ccmanager/config.json" ]; then
     echo "   ✅ ccmanager config file path: $DOTFILES_DIR/.ccmanager/config.json"

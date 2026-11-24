@@ -240,13 +240,21 @@
   },
   "enabledPlugins": {
     "aws-guard@ai-shared-assets": true,
-    "biz-ops-tools@ai-shared-assets": true
+    "biz-ops-tools@ai-shared-assets": true,
+    "yomiyasu@yomiyasu": true
   },
   "extraKnownMarketplaces": {
     "ai-shared-assets": {
       "source": {
         "source": "git",
         "url": "https://gitlab.com/mates-pay/app/ai-shared-assets.git"
+      }
+    },
+    "yomiyasu": {
+      "source": {
+        "source": "github",
+        "repo": "nanaism/yomiyasu",
+        "ref": "8831b14a5c2c12d41096495f0b8fe52d46d390c6"
       }
     }
   },

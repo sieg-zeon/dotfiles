@@ -37,7 +37,7 @@ echo "Setting up Claude Code MCP servers..."
 if command -v claude &> /dev/null; then
     claude mcp add playwright -s user -- npx @playwright/mcp@latest 2>/dev/null || true
     claude mcp add chrome-devtools npx chrome-devtools-mcp@latest 2>/dev/null || true
-    claude mcp add context7 -s user -- npx @upstash/context7-mcp 2>/dev/null || true
+    claude mcp add context7 -s user -- pnpx @upstash/context7-mcp@4.4.4 2>/dev/null || true
     claude mcp add youtube -s user -- npx @anaisbetts/mcp-youtube 2>/dev/null || true
     # github MCPは環境変数が必要（~/.zshrc.localで設定）
     # - GITHUB_PERSONAL_ACCESS_TOKEN: アクセストークン
